@@ -11,7 +11,7 @@ const Welcom = () => {
     <Container>
       <SC.WrapperW>
         <SC.TitleW>
-          Добро пожаловать в <br /> личный кабинет
+          Добро пожаловать в<br /> личный кабинет
         </SC.TitleW>
       </SC.WrapperW>
     </Container>
