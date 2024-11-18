@@ -1,15 +1,25 @@
 import { ComponentProps, FC } from "react";
 import * as SC from "./StyledButton";
 
-interface ByttonType {
+export interface ByttonType {
   width?: string;
   height?: string;
-  content?: string;
-  textSize?: string;
+  textsize?: string;
   background?: string;
+  text?:string;
+  onClick?: () => void;
 }
 
 const Button: FC<ByttonType> = (props) => {
-  return <SC.Container></SC.Container>;
+
+  return (
+    <SC.Button onClick={props.onClick}
+    width={props.width}
+    height={props.height}
+    textsize={props.textsize}
+    background={props.background}
+    >{props.text}
+    </SC.Button>
+  );
 };
 export default Button;

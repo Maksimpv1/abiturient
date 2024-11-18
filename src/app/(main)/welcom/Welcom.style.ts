@@ -15,3 +15,11 @@ export const TitleW = styled(Title)`
   font-weight: 150;
   color: #8D212D;
 `;
+
+export const BtnContainer = styled.div`
+  display: flex;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
+`;
