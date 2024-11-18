@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./MainLayout.module.css"
+import Header from "./_components/Header/Header";
 
 const MainLoyout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles.layoutWrapper} >
       <div className={styles.ui_wrapper}>
         <div className={styles.headerContainer}>
-          <p>типо хедер</p>
+          <Header/>
         </div>
       </div>
       
