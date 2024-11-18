@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import * as SC from './Header.style'
+import Facebook from '@/app/components/ui/icons/Facebook';
 
 const Header = () => {
     return (

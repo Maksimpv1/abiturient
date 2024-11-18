@@ -1,10 +1,12 @@
+'use client'
+
 import { ComponentProps, FC } from "react";
 import * as SC from "./StyledButton";
 
 export interface ByttonType {
   width?: string;
   height?: string;
-  textsize?: string;
+  fontSize?: string;
   background?: string;
   text?:string;
   onClick?: () => void;
@@ -16,7 +18,7 @@ const Button: FC<ByttonType> = (props) => {
     <SC.Button onClick={props.onClick}
     width={props.width}
     height={props.height}
-    textsize={props.textsize}
+    fontSize={props.fontSize}
     background={props.background}
     >{props.text}
     </SC.Button>

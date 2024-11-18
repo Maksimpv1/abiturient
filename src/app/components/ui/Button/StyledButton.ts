@@ -12,7 +12,7 @@ export const Button = styled.button<ByttonType>`
     padding: 10px;
     width: ${(props) => props.width ? `${props.width}px` : 'px'};
     height: ${(props) => props.height ? `${props.height}px` : 'px'};
-    font-size: ${(props) => props.textsize ? `${props.textsize}px` : '14px' };
+    font-size: ${(props) => props.fontSize ? `${props.fontSize}px` : '14px' };
     transition:0.3s ease-in-out;
     &:hover{
         transition:0.3s ease-in-out;

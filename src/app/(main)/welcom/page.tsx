@@ -1,9 +1,6 @@
 "use client";
 
-import {
-  Container,
-  Title,
-} from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import {Container } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import * as SC from "./Welcom.style";
 import { Button } from "@/app/components/ui/Button/StyledButton";
 
@@ -19,8 +16,8 @@ const Welcom = () => {
           Добро пожаловать в<br /> личный кабинет
         </SC.TitleW>
         <SC.BtnContainer>
-          <Button onClick={handleClick} textsize={'24'}>Войти</Button>
-          <Button textsize={'24'}>Регистрация</Button>
+          <Button onClick={handleClick} fontSize={'24'}>Войти</Button>
+          <Button fontSize={'24'}>Регистрация</Button>
         </SC.BtnContainer>
       </SC.WrapperW>
     </Container>

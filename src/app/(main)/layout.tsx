@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./MainLayout.module.css"
 import Header from "./_components/Header/Header";
+import Footer from "./_components/Footer/Footer";
 
 const MainLoyout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -19,7 +20,7 @@ const MainLoyout = ({ children }: { children: React.ReactNode }) => {
 
       <div className={styles.ui_wrapper}>
         <div className={styles.footerContainer}>
-          <p>типо футер</p>
+          <Footer/>
         </div>
       </div>
     </div>
