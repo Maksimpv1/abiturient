@@ -1,9 +1,7 @@
-'use client'
-
 const Facebook = () => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg"
-             viewBox="0 0 35 35" 
+             viewBox="0 0 50 50" 
              width="35px" 
              height="35px"
              fill="#8D212D">    

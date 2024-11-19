@@ -14,4 +14,13 @@ export const ImgBox = styled.div`
     background-color: #FFFFFF;
     margin: 0 0 0 10px;
     border: 1px solid #8D212D;
+    svg{
+            transition: 0.3s ease-in-out;
+        }
+    &:hover{
+        svg{
+            transition: 0.3s ease-in-out;
+            scale: 0.8;
+        }
+    }
 `;
