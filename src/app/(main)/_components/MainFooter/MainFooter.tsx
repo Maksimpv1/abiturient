@@ -1,32 +1,34 @@
-'use client'
+"use client";
 
 import React from "react";
 import Facebook from "@/app/components/ui/icons/Facebook";
-import * as SC from "./MainFooter.style"
+import * as SC from "./MainFooter.style";
 import Instagram from "@/app/components/ui/icons/Instagram";
 import Vk from "@/app/components/ui/icons/Vk";
 import Telegram from "@/app/components/ui/icons/Telegram";
 import Youtube from "@/app/components/ui/icons/Youtube";
 interface IIcons {
-    name:React.ReactNode;
+  name: React.ReactNode;
+  link?: string;
 }
 const MainFooter = () => {
-    const icons:IIcons[] = [
-       { name:<Facebook/>},
-       { name:<Instagram/>},
-       { name:<Vk/>},
-       { name:<Telegram/>},
-       { name:<Youtube/>}
-]
-    return(
-        <SC.Container>
-            {icons.map((item, index)=>(
-                <SC.ImgBox key={index}>
-                    {item.name}
-                </SC.ImgBox>
-            ))}
-        </SC.Container>
-    )
-} 
+  const icons: IIcons[] = [
+    { name: <Facebook />, link: "https://www.facebook.com/bdukm/" },
+    { name: <Instagram />, link: "https://www.instagram.com/bguki/" },
+    { name: <Vk />, link: "https://vk.com/bdukm" },
+    { name: <Telegram />, link: "https://t.me/bguki" },
+    {
+      name: <Youtube />,
+      link: "https://www.youtube.com/channel/UCYYU9JPJxzSKzSnYKZ6eX-g",
+    },
+  ];
+  return (
+    <SC.Container>
+      {icons.map((item, index) => (
+        <SC.ImgBox key={index}>{item.name}</SC.ImgBox>
+      ))}
+    </SC.Container>
+  );
+};
 
 export default MainFooter;

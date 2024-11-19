@@ -1,22 +1,19 @@
 import React from "react";
-import styles from "./MainLayout.module.css"
+import styles from "./MainLayout.module.css";
 import Header from "./_components/Header/Header";
 import MainFooter from "./_components/MainFooter/MainFooter";
 
-const MainLoyout = async({ children }: { children: React.ReactNode }) => {
+const MainLoyout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={styles.layoutWrapper} >
+    <div className={styles.layoutWrapper}>
       <div className={styles.ui_wrapper}>
         <div className={styles.headerContainer}>
-          <Header/>
-          
+          <Header />
         </div>
       </div>
-      
+
       <div className={styles.mainWrapper}>
-        <div className={styles.mainContainer}>
-          {children}
-        </div>
+        <div className={styles.mainContainer}>{children}</div>
       </div>
 
       <div className={styles.ui_wrapper}>

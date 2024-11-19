@@ -13,7 +13,7 @@ export const TitleW = styled(Title)`
   text-align: center;
   line-height: 44px;
   font-weight: 150;
-  color: #8D212D;
+  color: #8d212d;
 `;
 
 export const BtnContainer = styled.div`
