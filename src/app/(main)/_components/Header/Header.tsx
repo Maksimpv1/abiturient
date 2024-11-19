@@ -18,6 +18,7 @@ const Header = () => {
         width={400}
         height={120}
         onClick={handleClick}
+        priority
       />
     </SC.ImgContainer>
   );

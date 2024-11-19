@@ -10,6 +10,7 @@ export interface ByttonType {
   background?: string;
   text?: string;
   onClick?: () => void;
+  type?: string,
 }
 
 const Button: FC<ByttonType> = (props) => {
@@ -20,6 +21,7 @@ const Button: FC<ByttonType> = (props) => {
       height={props.height}
       fontSize={props.fontSize}
       background={props.background}
+      type={props.type}
     >
       {props.text}
     </SC.Button>
