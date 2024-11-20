@@ -3,7 +3,13 @@
 import { Formik, getIn } from "formik";
 import * as yup from "yup";
 import { loginData } from "./loginData";
-import { BtnFormContainer, Container, StyledLink, Title, Wrapper } from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import {
+  BtnFormContainer,
+  Container,
+  StyledLink,
+  Title,
+  Wrapper,
+} from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import Button from "@/app/components/ui/Button/Button";
 import InputField from "@/app/components/ui/InputField/InputField";
 

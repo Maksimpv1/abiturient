@@ -1,10 +1,7 @@
 import WelcomWeb from "../_components/Welcom/Welcom";
 
 const Welcom = () => {
- 
-  return (
-    <WelcomWeb/>
-  );
+  return <WelcomWeb />;
 };
 
 export default Welcom;

@@ -9,7 +9,7 @@ export interface ByttonType {
   text?: string;
   onClick?: () => void;
   type?: string;
-  activeshow?:"true" | "false";
+  activeshow?: "true" | "false";
 }
 
 const Button: FC<ByttonType> = (props) => {

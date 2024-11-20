@@ -2,11 +2,16 @@
 
 import * as yup from "yup";
 import { registration } from "./registrationDate";
-import { BtnFormContainer, Container, StyledLink, Title, Wrapper } from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import {
+  BtnFormContainer,
+  Container,
+  StyledLink,
+  Title,
+  Wrapper,
+} from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import { Formik, getIn } from "formik";
 import InputField from "@/app/components/ui/InputField/InputField";
 import Button from "@/app/components/ui/Button/Button";
-
 
 const RegistrationProfile = () => {
   const ValidityState = yup.object().shape({
