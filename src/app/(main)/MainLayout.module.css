@@ -4,36 +4,37 @@
   min-height: 100vh;
 }
 
-.ui_wrapper {
+.ui_container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.headerContainer {
+.headerWrapper {
   width: 1170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.mainWrapper {
+.mainContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
-  flex-direction: column;
-}
-
-.mainContainer {
+  width: 1170px;
+  border-radius: 15px;
   flex: 1;
   background-color: #ffffff;
-  border-radius: 15px;
-  width: 1170px;
-  margin: 0;
+  margin: 0 auto;
 }
 
-.footerContainer {
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footerWrapper {
   width: 1170px;
   height: 100px;
   display: flex;

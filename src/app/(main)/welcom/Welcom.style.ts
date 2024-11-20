@@ -1,12 +1,5 @@
-import {
-  Title,
-  Wrapper,
-} from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import { Title } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import { styled } from "styled-components";
-
-export const WrapperW = styled(Wrapper)`
-  margin-top: 100px;
-`;
 
 export const TitleW = styled(Title)`
   white-space: pre-wrap;
