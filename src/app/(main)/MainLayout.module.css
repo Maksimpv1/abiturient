@@ -19,8 +19,6 @@
 
 .mainContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 1170px;
   border-radius: 15px;
   flex: 1;
@@ -31,7 +29,7 @@
 .mainWrapper {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 100%;
 }
 
 .footerWrapper {

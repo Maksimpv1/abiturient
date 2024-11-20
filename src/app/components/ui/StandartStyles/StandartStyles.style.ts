@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: inherit;
+  height: 100%;
 `;
 
 export const Wrapper = styled.div`

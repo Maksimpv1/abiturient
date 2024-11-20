@@ -5,11 +5,10 @@ export const Button = styled.button<ByttonType>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) =>
-    props.background ? props.background : "#FFFFF"};
+  background-color: ${(props) => props.activeshow === "true" ? '#8d212d' : props.background ? props.background : "#FFFFF"  };
   border-radius: 15px;
   border: 1px solid #8d212d;
-  color: #8d212d;
+  color: ${(props) => props.activeshow === "true" ? '#FFFFFF' : '#8d212d'};
   padding: 10px;
   width: ${(props) => (props.width ? `${props.width}px` : "px")};
   height: ${(props) => (props.height ? `${props.height}px` : "px")};
@@ -17,7 +16,7 @@ export const Button = styled.button<ByttonType>`
   transition: 0.3s ease-in-out;
   &:hover {
     transition: 0.3s ease-in-out;
-    background-color: #8d212d;
+    background-color: #8D4850;
     color: white;
   }
 `;
