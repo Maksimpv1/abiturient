@@ -1,4 +1,8 @@
+import ProfileContent from "./_components/ProfileContent/ProfileContent";
+
 const Profile = () => {
-  return <div>профиль</div>;
+  return (
+    <ProfileContent/>
+  );
 };
 export default Profile;
