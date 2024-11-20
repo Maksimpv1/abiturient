@@ -1,6 +1,7 @@
 'use client'
 
 import { FC, useState } from "react";
+import * as SC from "./InputField.style"
 
 interface IInputField {
     label:string,
@@ -22,11 +23,14 @@ const InputField:FC<IInputField> = (props) => {
     };
 
     return(
-        <div>
-            <label title={props.label}/>
-            <input type={props.type} value={value} onChange={handleChange} onBlur={props.onBlur} name={props.name}/>
-            <p>{props.errors}</p>
-        </div>
+        <SC.Container>
+            <SC.TextContainer>
+                <label>{props.label}</label>
+                <p>{props.errors}</p>
+            </SC.TextContainer>
+            <SC.TextField type={props.type} value={value} onChange={handleChange} onBlur={props.onBlur} name={props.name}/>
+            
+        </SC.Container>
     )
 }
 export default InputField;

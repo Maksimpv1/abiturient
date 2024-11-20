@@ -6,18 +6,18 @@ import MainFooter from "./_components/MainFooter/MainFooter";
 const MainLoyout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles.layoutWrapper}>
-      <div className={styles.ui_wrapper}>
-        <div className={styles.headerContainer}>
+      <div className={styles.ui_container}>
+        <div className={styles.headerWrapper}>
           <Header />
         </div>
       </div>
 
-      <div className={styles.mainWrapper}>
-        <div className={styles.mainContainer}>{children}</div>
+      <div className={styles.mainContainer}>
+        <div className={styles.mainWrapper}>{children}</div>
       </div>
 
-      <div className={styles.ui_wrapper}>
-        <div className={styles.footerContainer}>
+      <div className={styles.ui_container}>
+        <div className={styles.footerWrapper}>
           <MainFooter />
         </div>
       </div>
