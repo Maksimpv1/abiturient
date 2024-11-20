@@ -9,13 +9,12 @@ interface IIcons {
   link?: string;
 }
 export const icons: IIcons[] = [
-    { name: <Facebook />, link: "https://www.facebook.com/bdukm/" },
-    { name: <Instagram />, link: "https://www.instagram.com/bguki/" },
-    { name: <Vk />, link: "https://vk.com/bdukm" },
-    { name: <Telegram />, link: "https://t.me/bguki" },
-    {
-      name: <Youtube />,
-      link: "https://www.youtube.com/channel/UCYYU9JPJxzSKzSnYKZ6eX-g",
-    },
-  ];
-
+  { name: <Facebook />, link: "https://www.facebook.com/bdukm/" },
+  { name: <Instagram />, link: "https://www.instagram.com/bguki/" },
+  { name: <Vk />, link: "https://vk.com/bdukm" },
+  { name: <Telegram />, link: "https://t.me/bguki" },
+  {
+    name: <Youtube />,
+    link: "https://www.youtube.com/channel/UCYYU9JPJxzSKzSnYKZ6eX-g",
+  },
+];

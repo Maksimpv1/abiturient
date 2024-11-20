@@ -1,6 +1,9 @@
 "use client";
 
-import { Container, Wrapper } from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import {
+  Container,
+  Wrapper,
+} from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import * as SC from "./Welcom.style";
 import { Button } from "@/app/components/ui/Button/StyledButton";
 import { useRouter } from "next/navigation";
@@ -15,7 +18,7 @@ const Welcom = () => {
     router.push("/registration");
   };
   return (
-    <div style={{height:"100%"}}>
+    <div style={{ height: "100%" }}>
       <Wrapper>
         <SC.TitleW>
           Добро пожаловать в<br /> личный кабинет

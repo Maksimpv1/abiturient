@@ -1,6 +1,4 @@
-import {
-  Title,
-} from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import { Title } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import { styled } from "styled-components";
 
 export const TitleW = styled(Title)`

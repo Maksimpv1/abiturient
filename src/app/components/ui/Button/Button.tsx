@@ -10,7 +10,7 @@ export interface ByttonType {
   background?: string;
   text?: string;
   onClick?: () => void;
-  type?: string,
+  type?: string;
 }
 
 const Button: FC<ByttonType> = (props) => {

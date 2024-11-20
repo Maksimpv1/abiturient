@@ -21,15 +21,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 1170px;  
+  width: 1170px;
   border-radius: 15px;
-  flex: 1; 
-  background-color: #ffffff;  
+  flex: 1;
+  background-color: #ffffff;
   margin: 0 auto;
 }
 
 .mainWrapper {
-  display: flex;  
+  display: flex;
   flex-direction: column;
   height: 100%;
 }

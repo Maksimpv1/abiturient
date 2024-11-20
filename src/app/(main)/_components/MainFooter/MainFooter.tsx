@@ -5,7 +5,6 @@ import * as SC from "./MainFooter.style";
 import { icons } from "./IconsData";
 
 const MainFooter = () => {
-
   return (
     <SC.Container>
       {icons.map((item, index) => (

@@ -36,7 +36,7 @@ export const BtnFormContainer = styled.div`
 export const StyledLink = styled(Link)`
   text-decoration: underline;
   margin: 10px;
-  &:hover{
-    color: #7A585C;
+  &:hover {
+    color: #7a585c;
   }
 `;
