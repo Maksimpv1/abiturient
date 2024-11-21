@@ -1,10 +1,7 @@
 import TeacherOne from "../_components/ProfileTeachers/TeacherOne";
 
 const TeacherPage = () => {
-
-    return(
-        <TeacherOne/>
-    )
-}
+  return <TeacherOne />;
+};
 
 export default TeacherPage;

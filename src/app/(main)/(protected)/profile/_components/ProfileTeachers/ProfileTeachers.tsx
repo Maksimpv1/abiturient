@@ -2,11 +2,10 @@ import { Container } from "@/app/components/ui/StandartStyles/StandartStyles.sty
 import Teachers from "./Teachers";
 
 const ProfileTeachers = () => {
-
-    return (
-        <Container>
-                   <Teachers/>
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Teachers />
+    </Container>
+  );
+};
 export default ProfileTeachers;

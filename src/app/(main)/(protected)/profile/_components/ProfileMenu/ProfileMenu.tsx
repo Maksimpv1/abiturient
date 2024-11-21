@@ -19,40 +19,40 @@ interface IMenuDate {
 }
 
 export const menuData: IMenuDate[] = [
-  { id: 0, name: "Главная", content: <ProfileMain/>},
-  { id: 1, name: "Расписания", content: <ProfileShcedule/>},
-  { id: 2, name: "Преподаватели", content: <ProfileTeachers/>},
-  { id: 3, name: "Оценки", content: <ProfileMarks/>},
+  { id: 0, name: "Главная", content: <ProfileMain /> },
+  { id: 1, name: "Расписания", content: <ProfileShcedule /> },
+  { id: 2, name: "Преподаватели", content: <ProfileTeachers /> },
+  { id: 3, name: "Оценки", content: <ProfileMarks /> },
 ];
 
 const ProfileMenu = () => {
-  const [menu, setMenu] = useState<IMenuDate[]>()
-  const routeName = usePathname()
-  const router = useRouter()
+  const [menu, setMenu] = useState<IMenuDate[]>();
+  const routeName = usePathname();
+  const router = useRouter();
   const dispatch = useAppDispatch();
 
   const [activeBtnMenu, setActiveBtnMenu] = useState<number>(0);
 
-  const handleClick = async(id: number) => {
+  const handleClick = async (id: number) => {
     setActiveBtnMenu(id);
-    try{
-      await dispatch(setProfilePage({id}))
-    }catch(error){
+    try {
+      await dispatch(setProfilePage({ id }));
+    } catch (error) {
       console.log((error as Error).message);
     }
   };
   const handleBack = () => {
-    router.back()
-  }
+    router.back();
+  };
 
-  useEffect(()=>{
-    console.log()
-    if(routeName != '/profile'){
-      setMenu([{id:0, name:'Назад', func:handleBack}])
-    }else{
-      setMenu(menuData)
+  useEffect(() => {
+    console.log();
+    if (routeName != "/profile") {
+      setMenu([{ id: 0, name: "Назад", func: handleBack }]);
+    } else {
+      setMenu(menuData);
     }
-  },[routeName])
+  }, [routeName]);
 
   return (
     <SC.MenuContainer>
@@ -60,7 +60,7 @@ const ProfileMenu = () => {
         <SC.MenuContainerBtn key={index}>
           <Button
             text={item.name}
-            onClick={item.func ? item.func :() => handleClick(item.id)}
+            onClick={item.func ? item.func : () => handleClick(item.id)}
             $activeshow={item.id === activeBtnMenu}
           />
         </SC.MenuContainerBtn>

@@ -1,6 +1,4 @@
 const ProfileMarks = () => {
-    return(
-        <div>Оценки</div>
-    )
-}
+  return <div>Оценки</div>;
+};
 export default ProfileMarks;

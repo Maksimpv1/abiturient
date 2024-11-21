@@ -13,7 +13,6 @@ export interface ButtonType {
 }
 
 const Button: FC<ButtonType> = (props) => {
-
   return (
     <SC.Button
       onClick={props.onClick}

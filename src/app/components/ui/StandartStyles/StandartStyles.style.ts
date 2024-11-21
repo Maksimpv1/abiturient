@@ -18,8 +18,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h2<{fontSize?:string}>`
-  font-size: ${(fontSize) => fontSize ? `${fontSize}px` : '42px'};
+export const Title = styled.h2<{ fontSize?: string }>`
+  font-size: ${(fontSize) => (fontSize ? `${fontSize}px` : "42px")};
   margin: 0;
   padding: 0;
   white-space: pre-wrap;
