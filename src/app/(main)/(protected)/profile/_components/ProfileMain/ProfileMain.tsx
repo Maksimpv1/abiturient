@@ -1,7 +1,7 @@
 const ProfileMain = () => {
     return(
         <div>
-            Главная
+
         </div>
     )
 }

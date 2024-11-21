@@ -1,7 +1,7 @@
 import { ComponentProps, FC } from "react";
 import * as SC from "./StyledButton";
 
-export interface ByttonType {
+export interface ButtonType {
   width?: string;
   height?: string;
   fontSize?: string;
@@ -9,10 +9,11 @@ export interface ByttonType {
   text?: string;
   onClick?: () => void;
   type?: string;
-  activeshow?: "true" | "false";
+  $activeshow?: boolean;
 }
 
-const Button: FC<ByttonType> = (props) => {
+const Button: FC<ButtonType> = (props) => {
+
   return (
     <SC.Button
       onClick={props.onClick}
@@ -21,7 +22,7 @@ const Button: FC<ByttonType> = (props) => {
       fontSize={props.fontSize}
       background={props.background}
       type={props.type}
-      activeshow={props.activeshow}
+      $activeshow={props.$activeshow}
     >
       {props.text}
     </SC.Button>

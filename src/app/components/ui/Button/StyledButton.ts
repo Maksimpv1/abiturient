@@ -1,19 +1,18 @@
 import { styled } from "styled-components";
-import { ByttonType } from "./Button";
+import { ButtonType } from "./Button";
 
-export const Button = styled.button<ByttonType>`
+export const Button = styled.button<ButtonType>`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) =>
-    props.activeshow === "true"
+  background-color: ${({$activeshow, background}) => ($activeshow 
       ? "#8d212d"
-      : props.background
-        ? props.background
-        : "#FFFFF"};
+      : background
+        ? background
+        : "#FFFFF")};
   border-radius: 15px;
   border: 1px solid #8d212d;
-  color: ${(props) => (props.activeshow === "true" ? "#FFFFFF" : "#8d212d")};
+  color: ${({$activeshow}) => ($activeshow ? "#FFFFFF" : "#8d212d")};
   padding: 10px;
   width: ${(props) => (props.width ? `${props.width}px` : "px")};
   height: ${(props) => (props.height ? `${props.height}px` : "px")};

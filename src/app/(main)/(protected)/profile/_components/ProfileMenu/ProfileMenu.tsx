@@ -9,11 +9,13 @@ import ProfileShcedule from "../ProfileShcedule/ProfileShcedule";
 import ProfileMain from "../ProfileMain/ProfileMain";
 import ProfileTeachers from "../ProfileTeachers/ProfileTeachers";
 import ProfileMarks from "../ProfileMarks/ProfileMarks";
+import { usePathname, useRouter } from "next/navigation";
 
 interface IMenuDate {
   id: number;
   name: string;
-  content: React.ReactNode;
+  content?: React.ReactNode;
+  func?: () => void;
 }
 
 export const menuData: IMenuDate[] = [
@@ -24,7 +26,9 @@ export const menuData: IMenuDate[] = [
 ];
 
 const ProfileMenu = () => {
-
+  const [menu, setMenu] = useState<IMenuDate[]>()
+  const routeName = usePathname()
+  const router = useRouter()
   const dispatch = useAppDispatch();
 
   const [activeBtnMenu, setActiveBtnMenu] = useState<number>(0);
@@ -37,15 +41,27 @@ const ProfileMenu = () => {
       console.log((error as Error).message);
     }
   };
+  const handleBack = () => {
+    router.back()
+  }
+
+  useEffect(()=>{
+    console.log()
+    if(routeName != '/profile'){
+      setMenu([{id:0, name:'Назад', func:handleBack}])
+    }else{
+      setMenu(menuData)
+    }
+  },[routeName])
 
   return (
     <SC.MenuContainer>
-      {menuData.map((item, index) => (
+      {menu?.map((item, index) => (
         <SC.MenuContainerBtn key={index}>
           <Button
             text={item.name}
-            onClick={() => handleClick(item.id)}
-            activeshow={item.id === activeBtnMenu ? "true" : "false"}
+            onClick={item.func ? item.func :() => handleClick(item.id)}
+            $activeshow={item.id === activeBtnMenu}
           />
         </SC.MenuContainerBtn>
       ))}
