@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
 `;
@@ -19,7 +18,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h2<{ fontSize?: string }>`
-  font-size: ${(fontSize) => (fontSize ? `${fontSize}px` : "42px")};
+  font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "42px")};
   margin: 0;
   padding: 0;
   white-space: pre-wrap;

@@ -12,6 +12,6 @@ const ProfileContent = () => {
     setCurrentPage(menuData.find((item) => item.id === idPage));
   }, [idPage]);
 
-  return <div>{currentPage && currentPage.content}</div>;
+  return <>{currentPage && currentPage.content}</>;
 };
 export default ProfileContent;
