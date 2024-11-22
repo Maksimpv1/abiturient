@@ -18,8 +18,8 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h2`
-  font-size: 42px;
+export const Title = styled.h2<{ fontSize?: string }>`
+  font-size: ${(fontSize) => (fontSize ? `${fontSize}px` : "42px")};
   margin: 0;
   padding: 0;
   white-space: pre-wrap;
@@ -31,6 +31,12 @@ export const BtnFormContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+`;
+export const Text = styled.p`
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
 `;
 
 export const StyledLink = styled(Link)`

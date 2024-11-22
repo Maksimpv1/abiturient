@@ -15,7 +15,7 @@ const profileSlice = createSlice({
   initialState,
   reducers: {
     setProfilePage(state, action) {
-      state.profilePage = action.payload.id
+      state.profilePage = action.payload.id;
     },
   },
 });
