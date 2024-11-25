@@ -1,5 +1,5 @@
-import { ComponentProps, FC } from "react";
-import * as SC from "./StyledButton";
+import { FC } from "react";
+import * as SC from "./Button.module";
 
 export interface ButtonType {
   width?: string;
@@ -10,6 +10,7 @@ export interface ButtonType {
   onClick?: () => void;
   type?: string;
   $activeshow?: boolean;
+  borderRadius?:string;
 }
 
 const Button: FC<ButtonType> = (props) => {
@@ -21,6 +22,7 @@ const Button: FC<ButtonType> = (props) => {
       fontSize={props.fontSize}
       background={props.background}
       type={props.type}
+      borderRadius={props.borderRadius}
       $activeshow={props.$activeshow}
     >
       {props.text}
