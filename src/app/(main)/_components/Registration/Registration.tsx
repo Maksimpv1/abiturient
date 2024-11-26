@@ -6,12 +6,12 @@ import {
   BtnFormContainer,
   Container,
   StyledLink,
-  Title,
   Wrapper,
 } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import { Formik, getIn } from "formik";
 import InputField from "@/app/components/ui/InputField/InputField";
 import Button from "@/app/components/ui/Button/Button";
+import Title from "@/app/components/ui/Title/Title";
 
 const RegistrationProfile = () => {
   const ValidityState = yup.object().shape({

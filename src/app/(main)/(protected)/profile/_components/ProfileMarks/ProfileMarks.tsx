@@ -1,13 +1,18 @@
+"use client";
+import Title from "@/app/components/ui/Title/Title";
+import * as SC from "./ProfileMarks.module";
+import MarksBtns from "./Marksbtns";
+import ProfileTable from "./ProfileTable";
 
-import { Container, Wrapper } from "@/app/components/ui/StandartStyles/StandartStyles.style";
-import * as SC from "./ProfileMarks.module"
 const ProfileMarks = () => {
   return (
-    <Container>
-      <Wrapper>
-        123
-      </Wrapper>
-    </Container>
+    <SC.Container>
+      <SC.Wrapper>
+        <Title textAlign={"center"}>Оценки за семестр:</Title>
+        <MarksBtns />
+        <ProfileTable />
+      </SC.Wrapper>
+    </SC.Container>
   );
 };
 export default ProfileMarks;

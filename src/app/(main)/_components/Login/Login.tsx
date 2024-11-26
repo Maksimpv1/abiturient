@@ -7,11 +7,11 @@ import {
   BtnFormContainer,
   Container,
   StyledLink,
-  Title,
   Wrapper,
 } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import Button from "@/app/components/ui/Button/Button";
 import InputField from "@/app/components/ui/InputField/InputField";
+import Title from "@/app/components/ui/Title/Title";
 
 const LoginProfile = () => {
   const ValidityState = yup.object().shape({
