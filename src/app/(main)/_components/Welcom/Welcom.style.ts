@@ -1,4 +1,3 @@
-
 import Title from "@/app/components/ui/Title/Title";
 import { styled } from "styled-components";
 

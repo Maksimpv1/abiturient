@@ -17,7 +17,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-
 export const BtnFormContainer = styled.div`
   display: flex;
   flex-direction: column;

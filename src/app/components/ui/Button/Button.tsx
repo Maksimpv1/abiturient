@@ -10,7 +10,7 @@ export interface ButtonType {
   onClick?: () => void;
   type?: string;
   $activeshow?: boolean;
-  borderRadius?:string;
+  borderRadius?: string;
 }
 
 const Button: FC<ButtonType> = (props) => {

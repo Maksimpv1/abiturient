@@ -1,7 +1,15 @@
 import { styled } from "styled-components";
 import { ButtonType } from "./Button";
 
-const shouldForwardProp = (prop: string) => !['$activeshow', 'background', 'borderRadius', 'width', 'height', 'fontSize'].includes(prop);
+const shouldForwardProp = (prop: string) =>
+  ![
+    "$activeshow",
+    "background",
+    "borderRadius",
+    "width",
+    "height",
+    "fontSize",
+  ].includes(prop);
 
 export const Button = styled.button.withConfig({
   shouldForwardProp: shouldForwardProp,
@@ -11,7 +19,8 @@ export const Button = styled.button.withConfig({
   align-items: center;
   background-color: ${({ $activeshow, background }) =>
     $activeshow ? "#8d212d" : background ? background : "#FFFFF"};
-  border-radius: ${(props) => props.borderRadius ? `${props.borderRadius}px` : '15px'};
+  border-radius: ${(props) =>
+    props.borderRadius ? `${props.borderRadius}px` : "15px"};
   border: 1px solid #8d212d;
   color: ${({ $activeshow }) => ($activeshow ? "#FFFFFF" : "#8d212d")};
   padding: 10px;
