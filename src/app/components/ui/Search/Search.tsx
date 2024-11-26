@@ -1,15 +1,24 @@
-import { useState } from 'react';
-import InputField from '../InputField/InputField';
-import * as SC from './Search.module'
-import { ITeacherData } from '@/app/(main)/(protected)/profile/_components/ProfileTeachers/TeacherData';
-import { IDataWeek } from '@/app/(main)/(protected)/profile/_components/ProfileShcedule/ScheduleData';
 
-const Search = ({dataTeach, dataSchedule} : {dataTeach?: ITeacherData[], dataSchedule?: IDataWeek[]}) => {
-    const [value, setValue] = useState<string>('')
+import { useState } from 'react';
+import * as SC from './Search.module'
+
+interface ISearch {
+    value:string,
+    onChange:(event: React.ChangeEvent<HTMLInputElement>) => void,
+}
+
+const Search = (props:ISearch) => {   
+
+    const [value, setValue] = useState<string>(props.value);
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setValue(event.target.value);
+      props.onChange(event);
+    }
 
     return(
         <>
-            <InputField type={'text'} value={value} />
+            <SC.SearchInput type={'text'} value={value} onChange={handleChange}/>
         </>
     )
 }

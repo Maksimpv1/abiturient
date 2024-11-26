@@ -5,13 +5,13 @@ import * as SC from "./ProfileTeachers.module";
 import TeacherFront from "./TeacherFront";
 import { useState } from "react";
 import { teacherData } from "./TeacherData";
-import Search from "@/app/components/ui/Search/Search";
+import TeacherSearch from "./TeacherSearch";
 
 const Teachers = () => {
 
   return (
     <SC.TeachersContainer>
-      <Search dataTeach={teacherData} />
+      <TeacherSearch/>
       {teacherData.map((item, index) => (
         <Link key={index} href={`/profile/${item.id}`}>
           <TeacherFront {...item} />

@@ -51,3 +51,9 @@ export const OneContainer = styled.div<{ margin?: string }>`
   align-items: center;
   margin: ${({ margin }) => margin};
 `;
+
+export const SeachContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+`;

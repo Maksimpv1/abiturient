@@ -12,6 +12,17 @@ export const SearchInput = styled.input`
     height: 60px;
     border-radius: 15px;
     font-size: 20px;
+    color: #8d212d;
+    transition: 0.2 ease-in-out;
+    &:hover {
+    border: 1px solid #8d212d;
+    transition: 0.2 ease-in-out;
+    }
+    &:focus {
+        border: 2px solid #8d212d;
+        outline: none;
+        transition: 0.2 ease-in-out;
+    }
     &:-webkit-autofill,
     &:-webkit-autofill:hover,
     &:-webkit-autofill:focus,
