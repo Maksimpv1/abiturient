@@ -4,9 +4,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
-  height: inherit;
+  height: 100%;
 `;
 
 export const Wrapper = styled.div`
@@ -18,19 +17,18 @@ export const Wrapper = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled.h2`
-  font-size: 42px;
-  margin: 0;
-  padding: 0;
-  white-space: pre-wrap;
-`;
-
 export const BtnFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+`;
+export const Text = styled.p`
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
 `;
 
 export const StyledLink = styled(Link)`
