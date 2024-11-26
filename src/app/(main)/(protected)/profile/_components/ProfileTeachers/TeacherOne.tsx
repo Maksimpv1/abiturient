@@ -4,10 +4,10 @@ import {
   Container,
   Text,
 } from "@/app/components/ui/StandartStyles/StandartStyles.style";
-import { teacherData } from "./Teachers";
 import { useParams } from "next/navigation";
 import * as SC from "./ProfileTeachers.module";
 import Title from "@/app/components/ui/Title/Title";
+import { teacherData } from "./TeacherData";
 
 const TeacherOne = () => {
   const params = useParams();

@@ -3,7 +3,7 @@
 import { useAppSelector } from "@/app/lib/storeHooks";
 import { columnName, ICursesData, IMarks } from "./MarksData";
 import * as SC from "./ProfileMarks.module";
-import { calculateAverage } from "@/app/components/hooks/CalculateAverage";
+import { calculateAverage } from "@/app/components/hooks/СalculateAverage";
 
 const ProfileTable = () => {
   const cursesData = useAppSelector((item) => item.profile.cursesData);
