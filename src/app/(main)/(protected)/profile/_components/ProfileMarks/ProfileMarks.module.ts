@@ -45,8 +45,13 @@ export const Block = styled.div<{$bg?: string, color?: string}>`
 export const BtnContainer = styled.div`
     display: flex;
     margin: 20px 0;
+    justify-content: space-between;
 `;
 
 export const BtnWrapper = styled.div`
     margin-right: 5px;
+`;
+
+export const BtnContent = styled.div`
+    display: flex;
 `;

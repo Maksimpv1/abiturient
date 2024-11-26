@@ -2,10 +2,11 @@
 
 import { Container, Text } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import * as SC from './ProfileMain.module'
+import GlobalAverage from "../ProfileMarks/GlobalAverage";
 
 interface IMainData {
   title: string,
-  info: string,
+  info: string | React.ReactNode,
 }
 
 const ProfileMain = () => {
@@ -14,7 +15,6 @@ const ProfileMain = () => {
     {title: 'Студенческий', info: ''},
     {title: 'Email :', info: ''},
     {title: 'Группа :', info: ''},
-    {title: 'Средний балл:', info: ''},
   ]
   return (
     <Container>
@@ -22,6 +22,7 @@ const ProfileMain = () => {
         {mainData.map((item,index)=>(
           <Text key={index}>{`${item.title} ${item.info}`}</Text>
         ))}
+        <GlobalAverage/>
       </SC.Wrapper>
     </Container>
   );
