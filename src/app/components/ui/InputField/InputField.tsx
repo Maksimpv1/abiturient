@@ -1,7 +1,7 @@
 "use client";
 
 import { FC, useState } from "react";
-import * as SC from "./InputField.style";
+import * as SC from "./InputField.module";
 
 interface IInputField {
   label?: string;
