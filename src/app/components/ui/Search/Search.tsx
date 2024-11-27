@@ -1,26 +1,24 @@
-
-import { useState } from 'react';
-import * as SC from './Search.module'
+import { useState } from "react";
+import * as SC from "./Search.module";
 
 interface ISearch {
-    value:string,
-    onChange:(event: React.ChangeEvent<HTMLInputElement>) => void,
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Search = (props:ISearch) => {   
+const Search = (props: ISearch) => {
+  const [value, setValue] = useState<string>(props.value);
 
-    const [value, setValue] = useState<string>(props.value);
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+    props.onChange(event);
+  };
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      setValue(event.target.value);
-      props.onChange(event);
-    }
-
-    return(
-        <>
-            <SC.SearchInput type={'text'} value={value} onChange={handleChange}/>
-        </>
-    )
-}
+  return (
+    <>
+      <SC.SearchInput type={"text"} value={value} onChange={handleChange} />
+    </>
+  );
+};
 
 export default Search;

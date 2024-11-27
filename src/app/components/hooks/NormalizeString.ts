@@ -1,3 +1,3 @@
 export const normalizeString = (str: string) => {
-    return str.toLowerCase()
-}
+  return str.toLowerCase();
+};

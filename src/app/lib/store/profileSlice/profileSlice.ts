@@ -3,7 +3,10 @@ import {
   ProfileKeysType,
   rowData,
 } from "@/app/(main)/(protected)/profile/_components/ProfileMarks/MarksData";
-import { ITeacherData, teacherData } from "@/app/(main)/(protected)/profile/_components/ProfileTeachers/TeacherData";
+import {
+  ITeacherData,
+  teacherData,
+} from "@/app/(main)/(protected)/profile/_components/ProfileTeachers/TeacherData";
 import filterTeachers from "@/app/components/hooks/FilterTeachers";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
@@ -12,9 +15,9 @@ interface ProfileState {
   profilePage: number;
   profileCurses: ProfileKeysType;
   cursesData: ICursesData;
-  profileTeachersSearchData:ITeacherData[];
+  profileTeachersSearchData: ITeacherData[];
   baseTeacherData: ITeacherData[];
-  profileTeachersSearch:boolean;
+  profileTeachersSearch: boolean;
 }
 
 const initialState: ProfileState = {
@@ -24,7 +27,7 @@ const initialState: ProfileState = {
   cursesData: rowData["cursesFir"],
   baseTeacherData: teacherData,
   profileTeachersSearchData: [],
-  profileTeachersSearch:false,
+  profileTeachersSearch: false,
 };
 
 const profileSlice = createSlice({
@@ -40,18 +43,19 @@ const profileSlice = createSlice({
       state.cursesData = rowData[curse];
     },
     setSearchTeacherData(state, action) {
-      const value = action.payload
-      const data = state.baseTeacherData
+      const value = action.payload;
+      const data = state.baseTeacherData;
       if (data) {
-        const filtered = filterTeachers(data,value)
+        const filtered = filterTeachers(data, value);
         state.profileTeachersSearchData = filtered;
       } else {
-        state.profileTeachersSearchData =[];
+        state.profileTeachersSearchData = [];
       }
     },
   },
 });
 
-export const { setProfilePage, setCursesMarks,setSearchTeacherData } = profileSlice.actions;
+export const { setProfilePage, setCursesMarks, setSearchTeacherData } =
+  profileSlice.actions;
 
 export default profileSlice.reducer;

@@ -9,11 +9,13 @@ import TeacherSearch from "./TeacherSearch";
 import { useAppSelector } from "@/app/lib/storeHooks";
 
 const Teachers = () => {
-  const searchData = useAppSelector((item) => item.profile.profileTeachersSearchData)
+  const searchData = useAppSelector(
+    (item) => item.profile.profileTeachersSearchData,
+  );
 
   return (
     <SC.TeachersContainer>
-      <TeacherSearch/>
+      <TeacherSearch />
       {searchData.map((item, index) => (
         <Link key={index} href={`/profile/${item.id}`}>
           <TeacherFront {...item} />
