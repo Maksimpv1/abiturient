@@ -1,6 +1,6 @@
 import Title from "@/app/components/ui/Title/Title";
 import { rowData } from "./MarksData";
-import { calculateAverage } from "@/app/components/hooks/CalculateAverage";
+import { calculateAverage } from "@/app/components/hooks/СalculateAverage";
 
 const GlobalAverage = () => {
   const globlaAverage = () => {
