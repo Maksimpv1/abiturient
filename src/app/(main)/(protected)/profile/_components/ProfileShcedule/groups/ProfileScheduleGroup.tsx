@@ -1,9 +1,15 @@
+import Cross from '@/app/components/ui/icons/Cross';
 import * as SC from './GroupsStyle.module'
 
-export const ProfileScheduleGroup = () => {
+interface IProfileScheduleGroup {
+    group: string,
+}
+
+export const ProfileScheduleGroup = (props:IProfileScheduleGroup) => {
     return(
-        <SC.GroupContainer>
-            <SC.Text>111223</SC.Text>
+        <SC.GroupContainer >
+            <SC.Text>{props.group}</SC.Text>
+            {/*<SC.SvgContainer>{props.type && <Cross />}</SC.SvgContainer>*/}
         </SC.GroupContainer>
     )
 }
