@@ -35,3 +35,10 @@ export const ScheduleItemLeft = styled.div`
     width: 30%;
 `;
 
+export const ScheduleItemBox = styled.div<{bg?:string}>`
+    display: flex;
+    margin: 0 15px;
+    width: 100px;
+    background: ${({bg})=> bg};
+`;
+
