@@ -28,11 +28,12 @@ const ScheduleItems = ({ item }: { item: IDataItem }) => {
     }, []);
 
     return (
-        <SC.ScheduleItemContainer>
-            <SC.ScheduleItemLeft>
-                <p>{item.name}</p>
-            </SC.ScheduleItemLeft>
-            <SC.ScheduleItemBox bg={type.color}>
+        <SC.ScheduleItemContainer>            
+            <SC.ScheduleItemBox>
+            <SC.ScheduleText>{item.name}</SC.ScheduleText>
+            </SC.ScheduleItemBox>
+            <SC.ItemTypeColor bg={type.color}/>
+            <SC.ScheduleItemBox>
                 {type.name}
             </SC.ScheduleItemBox>
             <SC.ScheduleItemBox>
