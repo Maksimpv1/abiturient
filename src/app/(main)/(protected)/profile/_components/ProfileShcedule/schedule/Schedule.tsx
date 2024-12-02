@@ -1,16 +1,23 @@
-import { useEffect, useState } from "react"
+import { FC, useEffect, useState } from "react"
 import { IDataWeek, scheduleData } from "../ScheduleData"
 import ScheduleDay from "./ScheduleDay"
 import * as SC from './ScheduleStyle.module'
 import Title from "@/app/components/ui/Title/Title"
 
-const Schedule = () => {
+interface ISchedule {
+    view: boolean,
+    group?:string,
+}
+
+const Schedule: FC<ISchedule> = ({view}) => {
     const [weekData, setWeekData] = useState<IDataWeek[]>([]);
 
     useEffect(()=>{
         scheduleData.map((item) => setWeekData(item.week))
     },[])
-
+    if(!view){
+        return <></>
+    } else
     return(
         <SC.ScheduleContainer>
            { weekData.map((week,index)=> (

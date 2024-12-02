@@ -54,3 +54,11 @@ export const SvgContainer = styled.div`
         }
     }
 `;
+
+export const ProfileScheduleGroupContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 10px;
+`;

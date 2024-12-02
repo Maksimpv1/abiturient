@@ -8,6 +8,7 @@ import {
   teacherData,
 } from "@/app/(main)/(protected)/profile/_components/ProfileTeachers/TeacherData";
 import filterTeachers from "@/app/components/hooks/FilterTeachers";
+import { groups } from "@/app/components/moc/groups";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ProfileState {
@@ -18,6 +19,8 @@ interface ProfileState {
   profileTeachersSearchData: ITeacherData[];
   baseTeacherData: ITeacherData[];
   profileTeachersSearch: boolean;
+  groups:string[];
+  selectedGroup?: string;
 }
 
 const initialState: ProfileState = {
@@ -28,6 +31,8 @@ const initialState: ProfileState = {
   baseTeacherData: teacherData,
   profileTeachersSearchData: [],
   profileTeachersSearch: false,
+  groups:groups,
+  selectedGroup:'',
 };
 
 const profileSlice = createSlice({
@@ -52,10 +57,14 @@ const profileSlice = createSlice({
         state.profileTeachersSearchData = [];
       }
     },
+    setGroup(state, action) {
+      state.selectedGroup = action.payload
+      console.log(action.payload)
+    },
   },
 });
 
-export const { setProfilePage, setCursesMarks, setSearchTeacherData } =
+export const { setProfilePage, setCursesMarks, setSearchTeacherData,setGroup } =
   profileSlice.actions;
 
 export default profileSlice.reducer;
