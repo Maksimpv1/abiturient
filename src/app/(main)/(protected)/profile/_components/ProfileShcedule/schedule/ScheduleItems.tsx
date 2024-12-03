@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IDataItem } from "../../../../../../components/moc/ScheduleData";
 import * as SC from "./ScheduleStyle.module";
+import Link from "next/link";
 
 interface IType {
   name?: string;
@@ -27,20 +28,24 @@ const ScheduleItems = ({ item }: { item: IDataItem }) => {
     }
   }, []);
 
+  const textData = [type.name, item.time, item.room];
+
   return (
     <SC.ScheduleItemContainer>
       <SC.ScheduleItemBox>
         <SC.ScheduleText>{item.name}</SC.ScheduleText>
       </SC.ScheduleItemBox>
       <SC.ItemTypeColor bg={type.color} />
-      <SC.ScheduleItemBox>{type.name}</SC.ScheduleItemBox>
-      <SC.ScheduleItemBox>{item.time}</SC.ScheduleItemBox>
-      <SC.ScheduleItemBox>{item.room}</SC.ScheduleItemBox>
+      {textData.map((item, index) => (
+        <SC.ScheduleItemBox key={index}>{item}</SC.ScheduleItemBox>
+      ))}
       {item.group ? (
         <SC.ScheduleItemBox>Группа:{item.group}</SC.ScheduleItemBox>
       ) : (
         <SC.ScheduleItemBox>
-          <SC.Icon />
+          <Link href={"profile/1"}>
+            <SC.Icon />
+          </Link>
         </SC.ScheduleItemBox>
       )}
     </SC.ScheduleItemContainer>

@@ -6,7 +6,7 @@ import {
 import { ITeacherData, teacherData } from "@/app/components/moc/TeacherData";
 import filterTeachers from "@/app/components/hooks/FilterTeachers";
 import { groups } from "@/app/components/moc/groups";
-import { IDataDay, IDataWeek } from "@/app/components/moc/ScheduleData";
+import { IDataWeek } from "@/app/components/moc/ScheduleData";
 import { teacherSchedule } from "@/app/components/moc/teacherSchedule";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
