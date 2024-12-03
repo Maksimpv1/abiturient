@@ -17,7 +17,7 @@ const TeacherOne = () => {
 
   const teacher = teacherData[id];
   const { secondName, firstName, lastName, kafedra, item, email } = teacher;
-  const schedule = useAppSelector((item) => item.profile.teacherSchedule)
+  const schedule = useAppSelector((item) => item.profile.teacherSchedule);
 
   if (!teacher) {
     return (
@@ -37,21 +37,21 @@ const TeacherOne = () => {
         >{`${secondName} ${firstName} ${lastName}`}</Title>
       </SC.OneContainer>
       <SC.TeacherOneInfo>
-      <Text>
-        Кафедра:{" "}
-        {kafedra.map((item, index) => (
-          <span key={index}>{item + " "}</span>
-        ))}
-      </Text>
-      <Text>
-        Предменты:{" "}
-        {item.map((item, index) => (
-          <span key={index}>{item}</span>
-        ))}
-      </Text>
-      <Text>Email: {email}</Text>
-      </SC.TeacherOneInfo> 
-      <Schedule weeksData={schedule}/>
+        <Text>
+          Кафедра:{" "}
+          {kafedra.map((item, index) => (
+            <span key={index}>{item + " "}</span>
+          ))}
+        </Text>
+        <Text>
+          Предменты:{" "}
+          {item.map((item, index) => (
+            <span key={index}>{item}</span>
+          ))}
+        </Text>
+        <Text>Email: {email}</Text>
+      </SC.TeacherOneInfo>
+      <Schedule weeksData={schedule} />
     </SC.TeachersContainer>
   );
 };

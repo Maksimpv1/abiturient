@@ -17,7 +17,11 @@ const Teachers = () => {
     <SC.TeachersContainer>
       <TeacherSearch />
       {searchData.map((item, index) => (
-        <Link style={{width:'100%'}} key={index} href={`/profile/${item.id}`}>
+        <Link
+          style={{ width: "100%" }}
+          key={index}
+          href={`/profile/${item.id}`}
+        >
           <TeacherFront {...item} />
         </Link>
       ))}

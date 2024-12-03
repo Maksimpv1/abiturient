@@ -11,7 +11,7 @@ export interface ButtonType {
   type?: string;
   $activeshow?: boolean;
   borderRadius?: string;
-  margin?:string;
+  margin?: string;
 }
 
 const Button: FC<ButtonType> = (props) => {
