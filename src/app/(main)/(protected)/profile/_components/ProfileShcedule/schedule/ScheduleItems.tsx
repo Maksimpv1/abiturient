@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IDataItem } from "../ScheduleData";
+import { IDataItem } from "../../../../../../components/moc/ScheduleData";
 import * as SC from './ScheduleStyle.module';
 
 interface IType {
@@ -42,6 +42,14 @@ const ScheduleItems = ({ item }: { item: IDataItem }) => {
             <SC.ScheduleItemBox>
                 {item.room}
             </SC.ScheduleItemBox>
+            {item.group ? 
+            <SC.ScheduleItemBox>
+                Группа:{item.group}
+            </SC.ScheduleItemBox> : 
+            <SC.ScheduleItemBox>
+                <SC.Icon/>
+            </SC.ScheduleItemBox> 
+            }
         </SC.ScheduleItemContainer>
     );
 }

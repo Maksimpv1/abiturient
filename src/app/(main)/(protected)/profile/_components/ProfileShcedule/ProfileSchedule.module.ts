@@ -13,3 +13,10 @@ export const SearchContainer = styled.div`
   margin: 0 auto;
   width: 100%;
 `;
+
+export const ViewContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;

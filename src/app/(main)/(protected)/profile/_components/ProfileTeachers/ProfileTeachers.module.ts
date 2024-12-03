@@ -5,6 +5,7 @@ export const TeachersContainer = styled.div`
   max-width: 650px;
   flex-direction: column;
   margin: 0 auto;
+  align-items: center;
   flex: 1;
 `;
 
@@ -56,4 +57,8 @@ export const SeachContainer = styled.div`
   display: flex;
   margin: 0 auto;
   width: 100%;
+`;
+export const TeacherOneInfo = styled.div`
+  display: flex;
+  flex-direction: column;
 `;

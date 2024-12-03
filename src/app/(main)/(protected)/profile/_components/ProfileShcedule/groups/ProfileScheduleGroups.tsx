@@ -4,7 +4,7 @@ import { useAppSelector } from "@/app/lib/storeHooks";
 
 
 const ProfileScheduleGroups = () => {
-    const groups = useAppSelector((item)=> item.profile.groups )
+    const groups = useAppSelector((item)=> item.profile.searchedGroups )
     return (
         <SC.GroupsContainer>
             <SC.GroupText>Выберите группу:</SC.GroupText>

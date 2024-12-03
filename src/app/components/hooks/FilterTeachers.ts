@@ -1,4 +1,4 @@
-import { ITeacherData } from "@/app/(main)/(protected)/profile/_components/ProfileTeachers/TeacherData";
+import { ITeacherData } from "@/app/components/moc/TeacherData";
 import { normalizeString } from "./NormalizeString";
 
 const filterTeachers = (data: ITeacherData[], value: string) => {

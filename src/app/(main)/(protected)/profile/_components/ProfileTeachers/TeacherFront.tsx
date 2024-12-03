@@ -2,9 +2,10 @@
 
 import { FC } from "react";
 import * as SC from "./ProfileTeachers.module";
-import { ITeacherData } from "./TeacherData";
+import { ITeacherData } from "../../../../../components/moc/TeacherData";
 
 const TeacherFront: FC<ITeacherData> = (props) => {
+
   return (
     <SC.TeacherContainer>
       <SC.TeacherLeft>

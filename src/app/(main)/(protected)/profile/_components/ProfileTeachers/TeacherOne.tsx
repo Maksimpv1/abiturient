@@ -7,7 +7,9 @@ import {
 import { useParams } from "next/navigation";
 import * as SC from "./ProfileTeachers.module";
 import Title from "@/app/components/ui/Title/Title";
-import { teacherData } from "./TeacherData";
+import { teacherData } from "../../../../../components/moc/TeacherData";
+import Schedule from "../ProfileShcedule/schedule/Schedule";
+import { useAppSelector } from "@/app/lib/storeHooks";
 
 const TeacherOne = () => {
   const params = useParams();
@@ -15,6 +17,7 @@ const TeacherOne = () => {
 
   const teacher = teacherData[id];
   const { secondName, firstName, lastName, kafedra, item, email } = teacher;
+  const schedule = useAppSelector((item) => item.profile.teacherSchedule)
 
   if (!teacher) {
     return (
@@ -33,6 +36,7 @@ const TeacherOne = () => {
           fontSize={"24"}
         >{`${secondName} ${firstName} ${lastName}`}</Title>
       </SC.OneContainer>
+      <SC.TeacherOneInfo>
       <Text>
         Кафедра:{" "}
         {kafedra.map((item, index) => (
@@ -46,6 +50,8 @@ const TeacherOne = () => {
         ))}
       </Text>
       <Text>Email: {email}</Text>
+      </SC.TeacherOneInfo> 
+      <Schedule weeksData={schedule}/>
     </SC.TeachersContainer>
   );
 };

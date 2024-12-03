@@ -11,6 +11,7 @@ export interface ButtonType {
   type?: string;
   $activeshow?: boolean;
   borderRadius?: string;
+  margin?:string;
 }
 
 const Button: FC<ButtonType> = (props) => {
@@ -24,6 +25,7 @@ const Button: FC<ButtonType> = (props) => {
       type={props.type}
       borderRadius={props.borderRadius}
       $activeshow={props.$activeshow}
+      margin={props.margin}
     >
       {props.text}
     </SC.Button>

@@ -59,6 +59,7 @@ export const ProfileScheduleGroupContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
     flex: 1;
     gap: 10px;
 `;

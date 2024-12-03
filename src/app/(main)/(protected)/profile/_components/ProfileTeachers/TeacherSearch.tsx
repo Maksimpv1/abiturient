@@ -1,7 +1,7 @@
 import Search from "@/app/components/ui/Search/Search";
 import * as SC from "./ProfileTeachers.module";
 import { useEffect, useState } from "react";
-import { ITeacherData, teacherData } from "./TeacherData";
+import { ITeacherData, teacherData } from "../../../../../components/moc/TeacherData";
 import { useAppDispatch } from "@/app/lib/storeHooks";
 import { setSearchTeacherData } from "@/app/lib/store/profileSlice/profileSlice";
 

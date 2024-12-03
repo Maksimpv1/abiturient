@@ -29,20 +29,20 @@ export const ScheduleItemContainer = styled.div`
     margin: 5px 0;
     justify-content: center;
     align-items: center;
-    height: 30px;
 `;
 
 export const ScheduleItemBox = styled.div`
     display: flex;
     margin: 0 15px;
     justify-content: center;
-    width: 120px;
+    min-width: 100px;
 `;
 export const ItemTypeColor = styled.span<{bg?:string}>`
     display: block;
     border-radius: 5px;
-    height: 100%;
+    height: 30px;
     border: 2px solid ${({bg})=> bg};
+    
 `;
 export const ScheduleItemInfo = styled.div`
     display: flex;
@@ -51,5 +51,13 @@ export const ScheduleItemInfo = styled.div`
 `;
 export const ScheduleText = styled.p`
     text-align: start;
+`;
+
+export const Icon = styled.div`
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 100%;
 `;
 
