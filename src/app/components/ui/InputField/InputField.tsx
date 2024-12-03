@@ -1,14 +1,14 @@
 "use client";
 
 import { FC, useState } from "react";
-import * as SC from "./InputField.style";
+import * as SC from "./InputField.module";
 
 interface IInputField {
-  label: string;
+  label?: string;
   type: string;
-  name: string;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: (event: React.FocusEvent<HTMLInputElement>) => void;
+  name?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   value: string;
   errors?: string | undefined;
 }
@@ -18,7 +18,7 @@ const InputField: FC<IInputField> = (props) => {
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
-    props.onChange(event);
+    if (props.onChange) props.onChange(event);
   };
 
   return (
