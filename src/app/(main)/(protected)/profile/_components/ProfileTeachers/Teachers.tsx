@@ -4,7 +4,7 @@ import Link from "next/link";
 import * as SC from "./ProfileTeachers.module";
 import TeacherFront from "./TeacherFront";
 import { use, useState } from "react";
-import { teacherData } from "./TeacherData";
+import { teacherData } from "../../../../../components/moc/TeacherData";
 import TeacherSearch from "./TeacherSearch";
 import { useAppSelector } from "@/app/lib/storeHooks";
 
@@ -17,7 +17,11 @@ const Teachers = () => {
     <SC.TeachersContainer>
       <TeacherSearch />
       {searchData.map((item, index) => (
-        <Link key={index} href={`/profile/${item.id}`}>
+        <Link
+          style={{ width: "100%" }}
+          key={index}
+          href={`/profile/${item.id}`}
+        >
           <TeacherFront {...item} />
         </Link>
       ))}

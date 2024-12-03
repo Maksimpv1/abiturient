@@ -3,11 +3,11 @@ import {
   ProfileKeysType,
   rowData,
 } from "@/app/(main)/(protected)/profile/_components/ProfileMarks/MarksData";
-import {
-  ITeacherData,
-  teacherData,
-} from "@/app/(main)/(protected)/profile/_components/ProfileTeachers/TeacherData";
+import { ITeacherData, teacherData } from "@/app/components/moc/TeacherData";
 import filterTeachers from "@/app/components/hooks/FilterTeachers";
+import { groups } from "@/app/components/moc/groups";
+import { IDataDay, IDataWeek } from "@/app/components/moc/ScheduleData";
+import { teacherSchedule } from "@/app/components/moc/teacherSchedule";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface ProfileState {
@@ -18,6 +18,10 @@ interface ProfileState {
   profileTeachersSearchData: ITeacherData[];
   baseTeacherData: ITeacherData[];
   profileTeachersSearch: boolean;
+  groups: string[];
+  selectedGroup?: string;
+  searchedGroups: string[];
+  teacherSchedule: IDataWeek[];
 }
 
 const initialState: ProfileState = {
@@ -28,6 +32,10 @@ const initialState: ProfileState = {
   baseTeacherData: teacherData,
   profileTeachersSearchData: [],
   profileTeachersSearch: false,
+  groups: groups,
+  searchedGroups: [],
+  selectedGroup: "",
+  teacherSchedule: teacherSchedule,
 };
 
 const profileSlice = createSlice({
@@ -52,10 +60,29 @@ const profileSlice = createSlice({
         state.profileTeachersSearchData = [];
       }
     },
+    setGroup(state, action) {
+      state.selectedGroup = action.payload;
+    },
+    setSearchGroup(state, action) {
+      const groups = state.groups;
+      console.log(action.payload);
+      if (groups) {
+        state.searchedGroups = groups.filter((item) =>
+          item.includes(action.payload),
+        );
+      } else {
+        state.searchedGroups = [];
+      }
+    },
   },
 });
 
-export const { setProfilePage, setCursesMarks, setSearchTeacherData } =
-  profileSlice.actions;
+export const {
+  setProfilePage,
+  setCursesMarks,
+  setSearchTeacherData,
+  setGroup,
+  setSearchGroup,
+} = profileSlice.actions;
 
 export default profileSlice.reducer;

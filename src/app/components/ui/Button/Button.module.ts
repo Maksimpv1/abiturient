@@ -9,6 +9,7 @@ const shouldForwardProp = (prop: string) =>
     "width",
     "height",
     "fontSize",
+    "margin",
   ].includes(prop);
 
 export const Button = styled.button.withConfig({
@@ -28,6 +29,7 @@ export const Button = styled.button.withConfig({
   height: ${(props) => (props.height ? `${props.height}px` : "px")};
   font-size: ${(props) => (props.fontSize ? `${props.fontSize}px` : "14px")};
   transition: 0.3s ease-in-out;
+  margin: ${({ margin }) => margin};
   &:hover {
     transition: 0.3s ease-in-out;
     background-color: #8d4850;

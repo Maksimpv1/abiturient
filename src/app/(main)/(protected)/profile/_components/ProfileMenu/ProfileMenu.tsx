@@ -11,7 +11,7 @@ import ProfileTeachers from "../ProfileTeachers/ProfileTeachers";
 import ProfileMarks from "../ProfileMarks/ProfileMarks";
 import { usePathname, useRouter } from "next/navigation";
 
-interface IMenuDate {
+export interface IMenuDate {
   id: number;
   name: string;
   content?: React.ReactNode;
