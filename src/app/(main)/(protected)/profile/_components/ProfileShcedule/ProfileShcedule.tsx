@@ -1,5 +1,5 @@
 import ScheduleSearch from "./ScheduleSearch";
-import * as SC from "./ProfileSchedule.module";
+import * as SC from "./ProfileSchedule.style";
 import { Container } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import ProfileScheduleGroups from "./groups/ProfileScheduleGroups";
 import Schedule from "./schedule/Schedule";

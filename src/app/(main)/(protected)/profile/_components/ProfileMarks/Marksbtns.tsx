@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/app/components/ui/Button/Button";
-import * as SC from "./ProfileMarks.module";
+import * as SC from "./ProfileMarks.style";
 import { useState } from "react";
 import { useAppDispatch } from "@/app/lib/storeHooks";
 import { setCursesMarks } from "@/app/lib/store/profileSlice/profileSlice";

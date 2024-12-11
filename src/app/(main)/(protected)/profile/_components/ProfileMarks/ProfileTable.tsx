@@ -2,11 +2,13 @@
 
 import { useAppSelector } from "@/app/lib/storeHooks";
 import { columnName, ICursesData, IMarks } from "./MarksData";
-import * as SC from "./ProfileMarks.module";
+import * as SC from "./ProfileMarks.style";
 import { calculateAverage } from "@/app/components/hooks/СalculateAverage";
+import useScreenSizeCheck from "@/app/components/hooks/UseScreenSizeCheck";
 
 const ProfileTable = () => {
   const cursesData = useAppSelector((item) => item.profile.cursesData);
+  const screenSize = useScreenSizeCheck();
 
   const averagePoint = (marks: IMarks) => {
     const allMarks = Object.values(marks);
@@ -26,6 +28,10 @@ const ProfileTable = () => {
     return Object.keys(obj[Object.keys(obj)[0]]) as (keyof IMarks)[];
   };
 
+  const truncateSubject = (subject: string) => {
+    return screenSize === "desctop" ? subject : subject.slice(0, 3);
+  };
+
   return (
     <>
       <SC.Row>
@@ -37,7 +43,7 @@ const ProfileTable = () => {
       </SC.Row>
       {Object.entries(cursesData).map(([subject, marks], index) => (
         <SC.Row key={index}>
-          <SC.Block>{subject}</SC.Block>
+          <SC.Block>{truncateSubject(subject)}</SC.Block>
           {Object.entries(marks).map(([sem, mark], index) => (
             <SC.Block key={index}>{mark ? mark : "—"}</SC.Block>
           ))}

@@ -1,5 +1,5 @@
 import Search from "@/app/components/ui/Search/Search";
-import * as SC from "./ProfileTeachers.module";
+import * as SC from "./ProfileTeachers.style";
 import { useEffect, useState } from "react";
 import {
   ITeacherData,

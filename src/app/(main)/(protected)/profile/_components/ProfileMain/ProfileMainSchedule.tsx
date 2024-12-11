@@ -1,6 +1,6 @@
 import Button from "@/app/components/ui/Button/Button";
 import { useState } from "react";
-import * as SC from "./ProfileMain.module";
+import * as SC from "./ProfileMain.style";
 import Schedule from "../ProfileShcedule/schedule/Schedule";
 import { scheduleData } from "@/app/components/moc/ScheduleData";
 

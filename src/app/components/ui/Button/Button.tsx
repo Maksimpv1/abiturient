@@ -1,5 +1,5 @@
 import { FC } from "react";
-import * as SC from "./Button.module";
+import * as SC from "./Button.style";
 
 export interface ButtonType {
   width?: string;
