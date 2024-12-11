@@ -1,3 +1,4 @@
+import { GlobalMedia } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import styled from "styled-components";
 
 export const ScheduleContainer = styled.div`
@@ -10,6 +11,7 @@ export const ScheduleContainerWeek = styled.div`
   display: flex;
   margin-top: 20px;
   flex-direction: column;
+  width: 100%;
 `;
 
 export const DayContainer = styled.div`
@@ -18,36 +20,40 @@ export const DayContainer = styled.div`
   flex-direction: column;
   background-color: #f0efed;
   border-radius: 15px;
+  width: 100%;
 `;
 
 export const DayText = styled.p`
   font-size: 18px;
   text-align: center;
 `;
-export const ScheduleItemContainer = styled.div`
-  display: flex;
-  margin: 5px 0;
-  justify-content: center;
-  align-items: center;
-`;
 
 export const ScheduleItemBox = styled.div`
   display: flex;
   margin: 0 15px;
   justify-content: center;
+  align-items: center;
   min-width: 100px;
+  @media ${GlobalMedia.tablet} {
+    min-width: 0px;
+  }
 `;
 export const ItemTypeColor = styled.span<{ bg?: string }>`
   display: block;
   border-radius: 5px;
   height: 30px;
   border: 2px solid ${({ bg }) => bg};
+  @media ${GlobalMedia.tablet} {
+    height: 50px;
+  }
 `;
 export const ScheduleItemInfo = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px 0;
 `;
+
 export const ScheduleText = styled.p`
   text-align: start;
 `;
@@ -58,4 +64,19 @@ export const Icon = styled.div`
   height: 50px;
   background-color: gray;
   border-radius: 100%;
+`;
+
+export const TableBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+`;
+export const TableContainer = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 20px;
+  @media (max-width: 530px) {
+    grid-template-columns: repeat(2, 1fr) 30px 1fr;
+  }
 `;

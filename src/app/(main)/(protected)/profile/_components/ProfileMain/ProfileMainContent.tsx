@@ -1,6 +1,6 @@
 import GlobalAverage from "../ProfileMarks/GlobalAverage";
 import { Text } from "@/app/components/ui/StandartStyles/StandartStyles.style";
-import * as SC from "./ProfileMain.module";
+import * as SC from "./ProfileMain.style";
 
 interface IMainData {
   title: string;

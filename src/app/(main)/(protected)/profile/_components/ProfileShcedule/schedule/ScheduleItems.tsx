@@ -1,15 +1,29 @@
 import { useEffect, useState } from "react";
 import { IDataItem } from "../../../../../../components/moc/ScheduleData";
-import * as SC from "./ScheduleStyle.module";
-import Link from "next/link";
+import * as SC from "./ScheduleStyle.style";
+import { GlobalMediaAsNumber } from "@/app/components/ui/StandartStyles/StandartStyles.style";
+import ItemDesctop from "./DeviceContent/ItemDesctop";
+import ItemTable from "./DeviceContent/ItemTable";
+import useScreenSizeCheck from "@/app/components/hooks/UseScreenSizeCheck";
 
 interface IType {
-  name?: string;
-  color?: string;
+  name: string;
+  color: string;
+}
+export interface IItemDesctop {
+  item: IDataItem;
+  type: IType;
 }
 
 const ScheduleItems = ({ item }: { item: IDataItem }) => {
-  const [type, setType] = useState<IType>({});
+  const [type, setType] = useState<IType>({ name: "", color: "" });
+  const [content, setContent] = useState<React.ReactNode>(null);
+  const screenSize = useScreenSizeCheck();
+
+  const contentData = [
+    { content: <ItemTable item={item} type={type} />, name: "tablet" },
+    { content: <ItemDesctop item={item} type={type} />, name: "desctop" },
+  ];
 
   useEffect(() => {
     switch (item.type) {
@@ -26,30 +40,14 @@ const ScheduleItems = ({ item }: { item: IDataItem }) => {
         setType({ name: "Неизвестный тип", color: "gray" });
         break;
     }
-  }, []);
+  }, [item.type, screenSize]);
 
-  const textData = [type.name, item.time, item.room];
+  useEffect(() => {
+    const content = contentData.find((item) => item.name === screenSize);
+    setContent(content?.content);
+  }, [screenSize]);
 
-  return (
-    <SC.ScheduleItemContainer>
-      <SC.ScheduleItemBox>
-        <SC.ScheduleText>{item.name}</SC.ScheduleText>
-      </SC.ScheduleItemBox>
-      <SC.ItemTypeColor bg={type.color} />
-      {textData.map((item, index) => (
-        <SC.ScheduleItemBox key={index}>{item}</SC.ScheduleItemBox>
-      ))}
-      {item.group ? (
-        <SC.ScheduleItemBox>Группа:{item.group}</SC.ScheduleItemBox>
-      ) : (
-        <SC.ScheduleItemBox>
-          <Link href={"profile/1"}>
-            <SC.Icon />
-          </Link>
-        </SC.ScheduleItemBox>
-      )}
-    </SC.ScheduleItemContainer>
-  );
+  return <>{content}</>;
 };
 
 export default ScheduleItems;

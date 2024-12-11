@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import * as SC from "./ProfileTeachers.module";
+import * as SC from "./ProfileTeachers.style";
 import TeacherFront from "./TeacherFront";
 import { use, useState } from "react";
 import { teacherData } from "../../../../../components/moc/TeacherData";

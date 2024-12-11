@@ -1,5 +1,5 @@
 import Cross from "@/app/components/ui/icons/Cross";
-import * as SC from "./GroupsStyle.module";
+import * as SC from "./GroupsStyle.style";
 import { useAppDispatch } from "@/app/lib/storeHooks";
 import { setGroup } from "@/app/lib/store/profileSlice/profileSlice";
 import { FC } from "react";

@@ -1,6 +1,6 @@
 "use client";
 import Title from "@/app/components/ui/Title/Title";
-import * as SC from "./ProfileMarks.module";
+import * as SC from "./ProfileMarks.style";
 import MarksBtns from "./Marksbtns";
 import ProfileTable from "./ProfileTable";
 

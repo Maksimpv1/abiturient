@@ -38,3 +38,14 @@ export const StyledLink = styled(Link)`
     color: #7a585c;
   }
 `;
+
+export const GlobalMedia = {
+  mobile: "(max-width: 516px)",
+  tablet: "(max-width: 1180px)",
+};
+
+export const GlobalMediaAsNumber = {
+  mobile: 516,
+  tablet: 1180,
+  desktop: 1920,
+};

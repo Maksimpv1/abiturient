@@ -9,7 +9,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -21,21 +22,24 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "2",
             group: "111303",
           },
           {
             name: "Математика",
-            time: "10 00 - 11 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
           },
           {
             name: "Математика",
-            time: "11 00 - 12 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -47,7 +51,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -59,7 +64,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "2",
             group: "111303",
@@ -71,7 +77,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -83,7 +90,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -95,7 +103,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "2",
             group: "111303",
@@ -112,21 +121,24 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "2",
             group: "111303",
           },
           {
             name: "Математика",
-            time: "11 00 - 12 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
           },
           {
             name: "Математика",
-            time: "13 00 - 14 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -138,7 +150,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -150,7 +163,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -162,7 +176,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -174,7 +189,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -186,7 +202,8 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
@@ -198,14 +215,16 @@ export const teacherSchedule: IDataWeek[] = [
         items: [
           {
             name: "Математика",
-            time: "9 00 - 10 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",
           },
           {
             name: "Математика",
-            time: "10 00 - 11 00",
+            timeStart: "9:00",
+            timeEnd: "10:00",
             room: "309",
             type: "1",
             group: "111303",

@@ -1,7 +1,7 @@
 "use client";
 
 import { Container } from "@/app/components/ui/StandartStyles/StandartStyles.style";
-import * as SC from "./ProfileMain.module";
+import * as SC from "./ProfileMain.style";
 import ProfileMainContent from "./ProfileMainContent";
 import ProfileMainSchedule from "./ProfileMainSchedule";
 

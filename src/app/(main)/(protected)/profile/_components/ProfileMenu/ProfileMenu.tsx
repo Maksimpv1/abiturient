@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/app/components/ui/Button/Button";
-import * as SC from "./ProfileMenu.module";
+import * as SC from "./ProfileMenu.style";
 import { useEffect, useState } from "react";
 import { useAppDispatch } from "@/app/lib/storeHooks";
 import { setProfilePage } from "@/app/lib/store/profileSlice/profileSlice";

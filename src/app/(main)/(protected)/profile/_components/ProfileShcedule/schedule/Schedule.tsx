@@ -4,7 +4,7 @@ import {
   scheduleData,
 } from "../../../../../../components/moc/ScheduleData";
 import ScheduleDay from "./ScheduleDay";
-import * as SC from "./ScheduleStyle.module";
+import * as SC from "./ScheduleStyle.style";
 import Title from "@/app/components/ui/Title/Title";
 
 interface ISchedule {

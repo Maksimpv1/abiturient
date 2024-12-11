@@ -1,6 +1,6 @@
 import Search from "@/app/components/ui/Search/Search";
 import React, { useEffect, useState } from "react";
-import * as SC from "./ProfileSchedule.module";
+import * as SC from "./ProfileSchedule.style";
 import { useAppDispatch, useAppSelector } from "@/app/lib/storeHooks";
 import { setSearchGroup } from "@/app/lib/store/profileSlice/profileSlice";
 

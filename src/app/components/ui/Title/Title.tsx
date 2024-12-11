@@ -1,4 +1,4 @@
-import { MainTitle } from "./Title.module";
+import { MainTitle } from "./Title.style";
 
 export interface ITitle {
   textAlign?: string;

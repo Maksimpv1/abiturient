@@ -1,5 +1,5 @@
 import ProfileScheduleGroup from "./ProfileScheduleGroup";
-import * as SC from "./GroupsStyle.module";
+import * as SC from "./GroupsStyle.style";
 import { useAppSelector } from "@/app/lib/storeHooks";
 
 const ProfileScheduleGroups = () => {

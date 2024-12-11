@@ -1,5 +1,5 @@
 import { useState } from "react";
-import * as SC from "./Search.module";
+import * as SC from "./Search.style";
 
 interface ISearch {
   value: string;

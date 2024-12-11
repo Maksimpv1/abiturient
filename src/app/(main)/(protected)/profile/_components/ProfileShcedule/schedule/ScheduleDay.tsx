@@ -1,6 +1,6 @@
 import { IDataWeek } from "../../../../../../components/moc/ScheduleData";
 import ScheduleItems from "./ScheduleItems";
-import * as SC from "./ScheduleStyle.module";
+import * as SC from "./ScheduleStyle.style";
 
 const ScheduleDay = ({ weekData }: { weekData: IDataWeek }) => {
   return (

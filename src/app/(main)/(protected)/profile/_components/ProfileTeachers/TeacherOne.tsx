@@ -5,7 +5,7 @@ import {
   Text,
 } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import { useParams } from "next/navigation";
-import * as SC from "./ProfileTeachers.module";
+import * as SC from "./ProfileTeachers.style";
 import Title from "@/app/components/ui/Title/Title";
 import { teacherData } from "../../../../../components/moc/TeacherData";
 import Schedule from "../ProfileShcedule/schedule/Schedule";
