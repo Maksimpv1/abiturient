@@ -11,20 +11,19 @@ interface IType {
   color: string;
 }
 export interface IItemDesctop {
-  item:IDataItem,
-  type: IType,
+  item: IDataItem;
+  type: IType;
 }
 
-
 const ScheduleItems = ({ item }: { item: IDataItem }) => {
-  const [type, setType] = useState<IType>({name: '' ,color:''});
+  const [type, setType] = useState<IType>({ name: "", color: "" });
   const [content, setContent] = useState<React.ReactNode>(null);
-  const screenSize = useScreenSizeCheck()
-  
+  const screenSize = useScreenSizeCheck();
+
   const contentData = [
-    {content:<ItemTable item={item} type={type}/>, name:'tablet'},
-    {content:<ItemDesctop item={item} type={type}/>, name: 'desctop'}
-  ]
+    { content: <ItemTable item={item} type={type} />, name: "tablet" },
+    { content: <ItemDesctop item={item} type={type} />, name: "desctop" },
+  ];
 
   useEffect(() => {
     switch (item.type) {
@@ -41,18 +40,14 @@ const ScheduleItems = ({ item }: { item: IDataItem }) => {
         setType({ name: "Неизвестный тип", color: "gray" });
         break;
     }
-  }, [item.type,screenSize]);
+  }, [item.type, screenSize]);
 
-  useEffect(()=>{
-    const content = (contentData.find((item)=> item.name === screenSize))
-    setContent(content?.content)
-  },[screenSize])
+  useEffect(() => {
+    const content = contentData.find((item) => item.name === screenSize);
+    setContent(content?.content);
+  }, [screenSize]);
 
-  return (
-    <>
-      {content}
-    </>
-  );
+  return <>{content}</>;
 };
 
 export default ScheduleItems;

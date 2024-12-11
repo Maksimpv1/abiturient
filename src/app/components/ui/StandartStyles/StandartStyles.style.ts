@@ -40,8 +40,8 @@ export const StyledLink = styled(Link)`
 `;
 
 export const GlobalMedia = {
-  mobile: '(max-width: 516px)',
-  tablet: '(max-width: 1180px)',
+  mobile: "(max-width: 516px)",
+  tablet: "(max-width: 1180px)",
 };
 
 export const GlobalMediaAsNumber = {

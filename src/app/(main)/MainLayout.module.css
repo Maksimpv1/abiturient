@@ -47,9 +47,9 @@
   align-items: center;
 }
 
-@media (max-width: 1180px ){ 
-  .layoutWrapper{
+@media (max-width: 1180px) {
+  .layoutWrapper {
     max-width: 100%;
     padding: 0 15px;
-  }  
+  }
 }

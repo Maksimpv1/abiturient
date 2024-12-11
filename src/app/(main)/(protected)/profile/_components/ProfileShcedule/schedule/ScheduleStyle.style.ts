@@ -28,7 +28,6 @@ export const DayText = styled.p`
   text-align: center;
 `;
 
-
 export const ScheduleItemBox = styled.div`
   display: flex;
   margin: 0 15px;
@@ -75,7 +74,7 @@ export const TableBox = styled.div`
 export const TableContainer = styled.div`
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr) ;
+  grid-template-columns: repeat(4, 1fr);
   padding: 0 20px;
   @media (max-width: 530px) {
     grid-template-columns: repeat(2, 1fr) 30px 1fr;
