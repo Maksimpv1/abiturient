@@ -21,6 +21,9 @@ export const DayContainer = styled.div`
   background-color: #f0efed;
   border-radius: 15px;
   width: 100%;
+  @media ${GlobalMedia.mobile} {
+    background: none;
+  }
 `;
 
 export const DayText = styled.p`
@@ -38,11 +41,11 @@ export const ScheduleItemBox = styled.div`
     min-width: 0px;
   }
 `;
-export const ItemTypeColor = styled.span<{ bg?: string }>`
+export const ItemTypeColor = styled.span<{ $bg?: string }>`
   display: block;
   border-radius: 5px;
   height: 30px;
-  border: 2px solid ${({ bg }) => bg};
+  border: 2px solid ${({ $bg }) => $bg};
   @media ${GlobalMedia.tablet} {
     height: 50px;
   }
@@ -78,5 +81,10 @@ export const TableContainer = styled.div`
   padding: 0 20px;
   @media (max-width: 530px) {
     grid-template-columns: repeat(2, 1fr) 30px 1fr;
+  }
+  @media ${GlobalMedia.mobile} {
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f0efed;
+    border-radius: 15px;
   }
 `;

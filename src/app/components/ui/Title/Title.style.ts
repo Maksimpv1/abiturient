@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import { ITitle } from "./Title";
+import { GlobalMedia } from "../StandartStyles/StandartStyles.style";
 
 const shouldForwardProp = (prop: string) =>
   !["textAlign", "fontSize"].includes(prop);
@@ -12,4 +13,7 @@ export const MainTitle = styled.h2.withConfig({
   padding: 0;
   white-space: pre-wrap;
   text-align: ${({ textAlign }) => textAlign || "start"};
+  @media ${GlobalMedia.mobile} {
+    font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "28px")};
+  }
 `;

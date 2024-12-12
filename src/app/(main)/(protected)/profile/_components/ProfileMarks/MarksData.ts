@@ -32,6 +32,15 @@ export const columnName: string[] = [
   "Средний балл",
 ];
 
+export const columnNameMobile: string[] = [
+  "Пр.",
+  "Сем 1",
+  "Сем 2",
+  "Сем 3",
+  "Сем 4",
+  "Ср. б.",
+];
+
 export const rowData: IRowDataType = {
   cursesFir: {
     Математика: { semOne: "9", semTwo: "8", semTree: "8", semFour: "4" },

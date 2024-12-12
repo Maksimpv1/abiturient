@@ -5,7 +5,7 @@ import Link from "next/link";
 import SmallScreenTime from "./SmallScreenTime";
 import TeachersAndGroups from "./TeachersAndGroups";
 
-const ItemTable: FC<IItemDesctop> = ({ item, type }) => {
+const ItemMobile: FC<IItemDesctop> = ({ item, type }) => {
   return (
     <SC.TableContainer>
       <SmallScreenTime
@@ -15,15 +15,10 @@ const ItemTable: FC<IItemDesctop> = ({ item, type }) => {
       />
       <SC.TableBox>
         <SC.ScheduleText>{item.name}</SC.ScheduleText>
-        <SC.ScheduleText>{type.name}</SC.ScheduleText>
+        <SC.ScheduleText>{item.room}</SC.ScheduleText>
       </SC.TableBox>
-      <SC.ScheduleItemBox>
-        <SC.TableBox>
-          <SC.ScheduleText>{item.room}</SC.ScheduleText>
-        </SC.TableBox>
-      </SC.ScheduleItemBox>
       <TeachersAndGroups group={item.group} />
     </SC.TableContainer>
   );
 };
-export default ItemTable;
+export default ItemMobile;

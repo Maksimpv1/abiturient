@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { IDataItem } from "../../../../../../components/moc/ScheduleData";
-import * as SC from "./ScheduleStyle.style";
-import { GlobalMediaAsNumber } from "@/app/components/ui/StandartStyles/StandartStyles.style";
 import ItemDesctop from "./DeviceContent/ItemDesctop";
 import ItemTable from "./DeviceContent/ItemTable";
 import useScreenSizeCheck from "@/app/components/hooks/UseScreenSizeCheck";
+import ItemMobile from "./DeviceContent/ItemMobile";
 
 interface IType {
   name: string;
@@ -16,14 +15,21 @@ export interface IItemDesctop {
 }
 
 const ScheduleItems = ({ item }: { item: IDataItem }) => {
-  const [type, setType] = useState<IType>({ name: "", color: "" });
+  const [type, setType] = useState<IType>({
+    name: "Неизвестный тип",
+    color: "gray",
+  });
   const [content, setContent] = useState<React.ReactNode>(null);
   const screenSize = useScreenSizeCheck();
 
-  const contentData = [
-    { content: <ItemTable item={item} type={type} />, name: "tablet" },
-    { content: <ItemDesctop item={item} type={type} />, name: "desctop" },
-  ];
+  const contentData = useMemo(
+    () => [
+      { content: <ItemMobile item={item} type={type} />, name: "mobile" },
+      { content: <ItemTable item={item} type={type} />, name: "tablet" },
+      { content: <ItemDesctop item={item} type={type} />, name: "desctop" },
+    ],
+    [item, type],
+  );
 
   useEffect(() => {
     switch (item.type) {
@@ -45,7 +51,7 @@ const ScheduleItems = ({ item }: { item: IDataItem }) => {
   useEffect(() => {
     const content = contentData.find((item) => item.name === screenSize);
     setContent(content?.content);
-  }, [screenSize]);
+  }, [screenSize, contentData]);
 
   return <>{content}</>;
 };
