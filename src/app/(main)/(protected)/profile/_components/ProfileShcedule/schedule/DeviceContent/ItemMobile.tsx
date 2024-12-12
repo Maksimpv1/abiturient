@@ -1,13 +1,24 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { IItemDesctop } from "../ScheduleItems";
 import * as SC from "../ScheduleStyle.style";
 import Link from "next/link";
 import SmallScreenTime from "./SmallScreenTime";
 import TeachersAndGroups from "./TeachersAndGroups";
+import MobileModal from "@/app/components/ui/MobileModal/MobileModal";
 
 const ItemMobile: FC<IItemDesctop> = ({ item, type }) => {
-  return (
-    <SC.TableContainer>
+  const [openModal, setOpenModal] = useState<boolean>(false)
+
+  const handleModalOpen = () => {
+    setOpenModal(true)
+  }
+  const handleModalClose = () => {
+    setOpenModal(false)
+    console.log('закрыл')
+  }
+   return ( 
+    <SC.TableContainer onClick={handleModalOpen}>
+      <MobileModal openModal={openModal} onClose={handleModalClose}/>
       <SmallScreenTime
         timeEnd={item.timeEnd}
         timeStart={item.timeStart}
