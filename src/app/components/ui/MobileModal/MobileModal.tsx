@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import * as SC from "./MobileModal.style"
 import Button from "../Button/Button";
 
@@ -9,20 +9,36 @@ interface IMobileModal {
 }
 
 const MobileModal:FC<IMobileModal> = ({openModal,onClose,children}) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false)
+    const modal = useRef<HTMLDivElement | null>(null)
+
     useEffect(() => {
-        console.log(openModal)
-        if (openModal) {
-          console.log('Модальное окно открыто');
-        } else {
-          console.log('Модальное окно закрыто');
-        }
-      }, [openModal]);
+        const handleOutClick = (event: MouseEvent) => {
+            if (modal.current && !modal.current.contains(event.target as Node)) {
+                handleClose()
+            }
+          };
+        if (openModal) setIsOpen(true)    
+        document.addEventListener('click', handleOutClick)
+    
+        return () => document.removeEventListener('click', handleOutClick);
+      },[]);
+
+      const handleClose = () => {
+        setIsOpen(false)  
+        setTimeout(() => {
+            onClose();
+          }, 300);
+      }
 
     return (
-        <SC.ModalContainer open={openModal}>
-            <SC.ModalShadow open={openModal} onClick={onClose}>
-                <SC.ModalWrapper open={openModal}>
-                    <Button text={'Закрыть'} onClick={onClose}/>
+        <SC.ModalContainer open={isOpen}>
+            <SC.ModalShadow open={isOpen}>
+                <SC.ModalWrapper open={isOpen} ref={modal}>
+                    <SC.ModalContant>
+                        <Button width={'70'} text={'Закрыть'} onClick={handleClose}/>
+                        {children}
+                    </SC.ModalContant>
                 </SC.ModalWrapper>
             </SC.ModalShadow>
         </SC.ModalContainer>

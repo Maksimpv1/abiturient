@@ -52,7 +52,6 @@ export const ModalShadow = styled.div<{ open: boolean }>`
 `;
 
 export const ModalContainer = styled.div<{ open: boolean }>`
-  display: ${({ open }) => (open ? "flex" : "none")};
   position: fixed;
   top: 0;
   left: 0;
@@ -62,6 +61,15 @@ export const ModalContainer = styled.div<{ open: boolean }>`
   align-items: flex-end;
   z-index: 1000;
   pointer-events: ${({ open }) => (open ? "auto" : "none")};
+  visibility: ${({ open }) => (open ? "visible" : "hidden")};
+  transition: visibility 0.3s ease-in-out;
+`;
+
+export const ModalContant = styled.div`
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const ModalWrapper = styled.div<{ open: boolean }>`

@@ -5,20 +5,23 @@ import Link from "next/link";
 import SmallScreenTime from "./SmallScreenTime";
 import TeachersAndGroups from "./TeachersAndGroups";
 import MobileModal from "@/app/components/ui/MobileModal/MobileModal";
+import ModalContant from "./ModalContant";
 
 const ItemMobile: FC<IItemDesctop> = ({ item, type }) => {
   const [openModal, setOpenModal] = useState<boolean>(false)
 
   const handleModalOpen = () => {
-    setOpenModal(true)
+    setOpenModal(!openModal)
   }
   const handleModalClose = () => {
-    setOpenModal(false)
-    console.log('закрыл')
+    setOpenModal(!openModal)
   }
    return ( 
+    <>    
+    {openModal && <MobileModal openModal={openModal} onClose={handleModalClose}>
+      <ModalContant item={item} type={type}/></MobileModal>
+    }
     <SC.TableContainer onClick={handleModalOpen}>
-      <MobileModal openModal={openModal} onClose={handleModalClose}/>
       <SmallScreenTime
         timeEnd={item.timeEnd}
         timeStart={item.timeStart}
@@ -30,6 +33,8 @@ const ItemMobile: FC<IItemDesctop> = ({ item, type }) => {
       </SC.TableBox>
       <TeachersAndGroups group={item.group} />
     </SC.TableContainer>
+    </>
+
   );
 };
 export default ItemMobile;

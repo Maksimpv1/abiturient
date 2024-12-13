@@ -88,3 +88,29 @@ export const TableContainer = styled.div`
     border-radius: 15px;
   }
 `;
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+`;
+
+export const ModalDetailsContaner = styled.div`
+  display: flex;
+  background-color:#f0efed;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+`;
+
+export const ModalTeacher = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+
+
