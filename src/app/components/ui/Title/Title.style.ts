@@ -9,7 +9,7 @@ export const MainTitle = styled.h2.withConfig({
   shouldForwardProp: shouldForwardProp,
 })<ITitle>`
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}px` : "42px")};
-  margin: ${({margin}) => margin ? `${margin}` : 0};
+  margin: ${({ margin }) => (margin ? `${margin}` : 0)};
   padding: 0;
   white-space: pre-wrap;
   text-align: ${({ textAlign }) => textAlign || "start"};

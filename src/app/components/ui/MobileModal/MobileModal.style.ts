@@ -36,7 +36,6 @@ const slideDown = keyframes`
   }
 `;
 
-
 export const ModalShadow = styled.div<{ open: boolean }>`
   width: 100%;
   height: 100%;

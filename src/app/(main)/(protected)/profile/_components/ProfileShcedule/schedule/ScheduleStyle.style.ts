@@ -98,7 +98,7 @@ export const ModalContainer = styled.div`
 
 export const ModalDetailsContaner = styled.div`
   display: flex;
-  background-color:#f0efed;
+  background-color: #f0efed;
   flex-direction: column;
   margin: 10px 0;
   width: 100%;
@@ -112,5 +112,3 @@ export const ModalTeacher = styled.div`
   align-items: center;
   width: 100%;
 `;
-
-

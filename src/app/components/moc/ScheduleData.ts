@@ -50,7 +50,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Математика",
@@ -59,7 +59,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -68,7 +68,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -77,7 +77,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "2",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -91,7 +91,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "2",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -100,7 +100,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "2",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -109,7 +109,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "3",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -123,7 +123,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -132,7 +132,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -141,7 +141,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -155,7 +155,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -164,7 +164,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -173,7 +173,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -187,7 +187,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -196,7 +196,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -205,7 +205,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -219,7 +219,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -228,7 +228,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -237,7 +237,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -251,7 +251,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -260,7 +260,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -269,7 +269,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -288,7 +288,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -297,7 +297,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -306,7 +306,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -320,7 +320,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -329,7 +329,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -338,7 +338,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -352,7 +352,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -361,7 +361,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -370,7 +370,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -384,7 +384,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -393,7 +393,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -402,7 +402,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -416,7 +416,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "2",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -425,7 +425,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -434,7 +434,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "3",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -448,7 +448,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -457,7 +457,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -466,7 +466,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
@@ -480,7 +480,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физика",
@@ -489,7 +489,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
               {
                 name: "Физкультура",
@@ -498,7 +498,7 @@ export const scheduleData: IDataSchudle[] = [
                 room: "309",
                 type: "1",
                 teacherphoto: "url: ......",
-                teacherName:'Игорь Игорь Игорь'
+                teacherName: "Игорь Игорь Игорь",
               },
             ],
           },
