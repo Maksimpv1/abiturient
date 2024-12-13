@@ -4,11 +4,12 @@ export interface ITitle {
   textAlign?: string;
   fontSize?: string;
   children?: React.ReactNode;
+  margin?: string;
 }
 
-const Title = ({ textAlign, fontSize, children }: ITitle) => {
+const Title = ({ textAlign, fontSize, children, margin }: ITitle) => {
   return (
-    <MainTitle fontSize={fontSize} textAlign={textAlign}>
+    <MainTitle fontSize={fontSize} textAlign={textAlign} margin={margin}>
       {children}
     </MainTitle>
   );

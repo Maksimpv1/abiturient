@@ -1,6 +1,17 @@
 import Link from "next/link";
 import styled from "styled-components";
 
+export const GlobalMedia = {
+  mobile: "(max-width: 516px)",
+  tablet: "(max-width: 1180px)",
+};
+
+export const GlobalMediaAsNumber = {
+  mobile: 516,
+  tablet: 1180,
+  desktop: 1920,
+};
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -15,6 +26,9 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media ${GlobalMedia.mobile} {
+    justify-content: flex-start;
+  }
 `;
 
 export const BtnFormContainer = styled.div`
@@ -38,14 +52,3 @@ export const StyledLink = styled(Link)`
     color: #7a585c;
   }
 `;
-
-export const GlobalMedia = {
-  mobile: "(max-width: 516px)",
-  tablet: "(max-width: 1180px)",
-};
-
-export const GlobalMediaAsNumber = {
-  mobile: 516,
-  tablet: 1180,
-  desktop: 1920,
-};

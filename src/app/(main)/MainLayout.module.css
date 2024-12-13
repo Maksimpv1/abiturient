@@ -53,3 +53,8 @@
     padding: 0 15px;
   }
 }
+@media (max-width: 530px) {
+  .mainContainer {
+    padding: 15px;
+  }
+}

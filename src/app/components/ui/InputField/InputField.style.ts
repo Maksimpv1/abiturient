@@ -1,9 +1,13 @@
 import { styled } from "styled-components";
+import { GlobalMedia } from "../StandartStyles/StandartStyles.style";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 350px;
+  @media ${GlobalMedia.mobile} {
+    width: 100%;
+  }
 `;
 export const TextContainer = styled.div`
   display: flex;

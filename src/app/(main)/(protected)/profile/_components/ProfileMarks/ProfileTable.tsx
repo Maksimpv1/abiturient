@@ -1,14 +1,16 @@
 "use client";
 
 import { useAppSelector } from "@/app/lib/storeHooks";
-import { columnName, ICursesData, IMarks } from "./MarksData";
+import { columnName, columnNameMobile, ICursesData, IMarks } from "./MarksData";
 import * as SC from "./ProfileMarks.style";
 import { calculateAverage } from "@/app/components/hooks/СalculateAverage";
 import useScreenSizeCheck from "@/app/components/hooks/UseScreenSizeCheck";
+import { useEffect, useState } from "react";
 
 const ProfileTable = () => {
   const cursesData = useAppSelector((item) => item.profile.cursesData);
   const screenSize = useScreenSizeCheck();
+  const [contentData, setContentData] = useState<string[]>([]);
 
   const averagePoint = (marks: IMarks) => {
     const allMarks = Object.values(marks);
@@ -32,10 +34,18 @@ const ProfileTable = () => {
     return screenSize === "desctop" ? subject : subject.slice(0, 3);
   };
 
+  useEffect(() => {
+    if (screenSize === "mobile") {
+      setContentData(columnNameMobile);
+    } else {
+      setContentData(columnName);
+    }
+  }, [screenSize]);
+
   return (
     <>
       <SC.Row>
-        {columnName.map((item, index) => (
+        {contentData.map((item, index) => (
           <SC.Block key={index} $bg={"#8D5057"} color={"#FFFFFF"}>
             {item}
           </SC.Block>
@@ -51,7 +61,9 @@ const ProfileTable = () => {
         </SC.Row>
       ))}
       <SC.Row>
-        <SC.Block>Средний балл</SC.Block>
+        <SC.Block>
+          {screenSize === "mobile" ? "Ср. б." : "Средний балл"}
+        </SC.Block>
         {getCommonProperties(cursesData).map((item, index) => (
           <SC.Block key={index}>{averageSemPoint(item)}</SC.Block>
         ))}

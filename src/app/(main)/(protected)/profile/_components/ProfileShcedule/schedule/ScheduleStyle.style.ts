@@ -21,6 +21,9 @@ export const DayContainer = styled.div`
   background-color: #f0efed;
   border-radius: 15px;
   width: 100%;
+  @media ${GlobalMedia.mobile} {
+    background: none;
+  }
 `;
 
 export const DayText = styled.p`
@@ -38,11 +41,11 @@ export const ScheduleItemBox = styled.div`
     min-width: 0px;
   }
 `;
-export const ItemTypeColor = styled.span<{ bg?: string }>`
+export const ItemTypeColor = styled.span<{ $bg?: string }>`
   display: block;
   border-radius: 5px;
   height: 30px;
-  border: 2px solid ${({ bg }) => bg};
+  border: 2px solid ${({ $bg }) => $bg};
   @media ${GlobalMedia.tablet} {
     height: 50px;
   }
@@ -79,4 +82,35 @@ export const TableContainer = styled.div`
   @media (max-width: 530px) {
     grid-template-columns: repeat(2, 1fr) 30px 1fr;
   }
+  @media ${GlobalMedia.mobile} {
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #f0efed;
+    border-radius: 15px;
+  }
 `;
+
+export const ModalContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px 0;
+`;
+
+export const ModalDetailsContaner = styled.div`
+  display: flex;
+  background-color:#f0efed;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 15px;
+  padding: 10px;
+`;
+
+export const ModalTeacher = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`;
+
+

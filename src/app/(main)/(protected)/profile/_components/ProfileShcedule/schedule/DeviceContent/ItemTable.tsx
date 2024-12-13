@@ -2,17 +2,17 @@ import { FC } from "react";
 import { IItemDesctop } from "../ScheduleItems";
 import * as SC from "../ScheduleStyle.style";
 import Link from "next/link";
+import SmallScreenTime from "./SmallScreenTime";
+import TeachersAndGroups from "./TeachersAndGroups";
 
 const ItemTable: FC<IItemDesctop> = ({ item, type }) => {
   return (
     <SC.TableContainer>
-      <SC.ScheduleItemBox>
-        <SC.TableBox>
-          <SC.ScheduleText>{item.timeStart}</SC.ScheduleText>
-          <SC.ScheduleText>{item.timeEnd}</SC.ScheduleText>
-        </SC.TableBox>
-        <SC.ItemTypeColor bg={type.color} />
-      </SC.ScheduleItemBox>
+      <SmallScreenTime
+        timeEnd={item.timeEnd}
+        timeStart={item.timeStart}
+        color={type.color}
+      />
       <SC.TableBox>
         <SC.ScheduleText>{item.name}</SC.ScheduleText>
         <SC.ScheduleText>{type.name}</SC.ScheduleText>
@@ -22,15 +22,7 @@ const ItemTable: FC<IItemDesctop> = ({ item, type }) => {
           <SC.ScheduleText>{item.room}</SC.ScheduleText>
         </SC.TableBox>
       </SC.ScheduleItemBox>
-      {item.group ? (
-        <SC.ScheduleItemBox>Группа:{item.group}</SC.ScheduleItemBox>
-      ) : (
-        <SC.ScheduleItemBox>
-          <Link href={"profile/1"}>
-            <SC.Icon />
-          </Link>
-        </SC.ScheduleItemBox>
-      )}
+      <TeachersAndGroups group={item.group} />
     </SC.TableContainer>
   );
 };

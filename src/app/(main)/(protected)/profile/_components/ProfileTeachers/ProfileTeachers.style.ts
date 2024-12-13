@@ -39,10 +39,6 @@ export const TeacherRight = styled.div`
   margin-left: 30px;
 `;
 
-export const RightTitel = styled.h2`
-  font-size: 20px;
-`;
-
 export const RightText = styled.h2`
   margin-top: 10px;
 `;
